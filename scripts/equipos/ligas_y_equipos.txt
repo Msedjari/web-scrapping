@@ -1,0 +1,82 @@
+Liga: Premier League
+  - Arsenal: https://datamb.football/Arsenal_Team_stats
+  - Aston Villa: https://datamb.football/Aston_Villa_Team_stats
+  - Bournemouth: https://datamb.football/Bournemouth_Team_stats
+  - Brentford: https://datamb.football/Brentford_Team_stats
+  - Brighton: https://datamb.football/Brighton_Team_stats
+  - Chelsea: https://datamb.football/Chelsea_Team_stats
+  - Crystal Palace: https://datamb.football/Crystal_Palace_Team_stats
+  - Everton: https://datamb.football/Everton_Team_stats
+  - Fulham: https://datamb.football/Fulham_Team_stats
+  - Ipswich Town: https://datamb.football/Ipswich_Town_Team_stats
+  - Leicester City: https://datamb.football/Leicester_City_Team_stats
+  - Liverpool: https://datamb.football/Liverpool_Team_stats
+  - Manchester City: https://datamb.football/Manchester_City_Team_stats
+  - Manchester United: https://datamb.football/Manchester_United_Team_stats
+  - Newcastle United: https://datamb.football/Newcastle_United_Team_stats
+  - Nottingham Forest: https://datamb.football/Nottingham_Forest_Team_stats
+  - Southampton: https://datamb.football/Southampton_Team_stats
+  - Tottenham Hotspur: https://datamb.football/Tottenham_Hotspur_Team_stats
+  - West Ham United: https://datamb.football/West_Ham_United_Team_stats
+  - Wolverhampton: https://datamb.football/Wolverhampton_Team_stats
+Liga: La Liga
+  - Athletic Bilbao: https://datamb.football/Athletic_Bilbao_Team_stats
+  - Atlético Madrid: https://datamb.football/Atletico_Madrid_Team_stats
+  - Barcelona: https://datamb.football/Barcelona_Team_stats
+  - Celta de Vigo: https://datamb.football/Celta_de_Vigo_Team_stats
+  - Deportivo Alavés: https://datamb.football/Deportivo_Alaves_Team_stats
+  - Espanyol: https://datamb.football/Espanyol_Team_stats
+  - Getafe: https://datamb.football/Getafe_Team_stats
+  - Girona: https://datamb.football/Girona_Team_stats
+  - Las Palmas: https://datamb.football/Las_Palmas_Team_stats
+  - Leganes: https://datamb.football/Leganes_Team_stats
+  - Mallorca: https://datamb.football/Mallorca_Team_stats
+  - Osasuna: https://datamb.football/Osasuna_Team_stats
+  - Rayo Vallecano: https://datamb.football/Rayo_Vallecano_Team_stats
+  - Real Betis: https://datamb.football/Real_Betis_Team_stats
+  - Real Madrid: https://datamb.football/Real_Madrid_Team_stats
+  - Real Sociedad: https://datamb.football/Real_Sociedad_Team_stats
+  - Real Valladolid: https://datamb.football/Real_Valladolid_Team_stats
+  - Sevilla: https://datamb.football/Sevilla_Team_stats
+  - Valencia: https://datamb.football/Valencia_Team_stats
+  - Villarreal: https://datamb.football/Villarreal_Team_stats
+Liga: Bundesliga
+  - Augsburg: https://datamb.football/Augsburg_Team_stats
+  - Bayer Leverkusen: https://datamb.football/Bayer_Leverkusen_Team_stats
+  - Bayern München: https://datamb.football/Bayern_Munchen_Team_stats
+  - Bochum: https://datamb.football/Bochum_Team_stats
+  - Borussia Dortmund: https://datamb.football/Borussia_Dortmund_Team_stats
+  - Borussia M'gladbach: https://datamb.football/Borussia_Mgladbach_Team_stats
+  - Eintracht Frankfurt: https://datamb.football/Eintracht_Frankfurt_Team_stats
+  - Freiburg: https://datamb.football/Freiburg_Team_stats
+  - Heidenheim: https://datamb.football/Heidenheim_Team_stats
+  - Hoffenheim: https://datamb.football/Hoffenheim_Team_stats
+  - Holstein Kiel: https://datamb.football/Holstein_Kiel_Team_stats
+  - Mainz 05: https://datamb.football/Mainz_05_Team_stats
+  - RB Leipzig: https://datamb.football/RB_Leipzig_Team_stats
+  - St Pauli: https://datamb.football/St_Pauli_Team_stats
+  - Stuttgart: https://datamb.football/Stuttgart_Team_stats
+  - Union Berlin: https://datamb.football/Union_Berlin_Team_stats
+  - Werder Bremen: https://datamb.football/Werder_Bremen_Team_stats
+  - Wolfsburg: https://datamb.football/Wolfsburg_Team_stats
+Liga: Serie A
+  - Atalanta: https://datamb.football/Atalanta_Team_stats
+  - Bologna: https://datamb.football/Bologna_Team_stats
+  - Cagliari: https://datamb.football/Cagliari_Team_stats
+  - Como: https://datamb.football/Como_Team_stats
+  - Empoli: https://datamb.football/Empoli_Team_stats
+  - Fiorentina: https://datamb.football/Fiorentina_Team_stats
+  - Genoa: https://datamb.football/Genoa_Team_stats
+  - Hellas Verona: https://datamb.football/Hellas_Verona_Team_stats
+  - Internazionale: https://datamb.football/Internazionale_Team_stats
+  - Juventus: https://datamb.football/Juventus_Team_stats
+  - Lazio: https://datamb.football/Lazio_Team_stats
+  - Lecce: https://datamb.football/Lecce_Team_stats
+  - Milan: https://datamb.football/Milan_Team_stats
+  - Monza: https://datamb.football/Monza_Team_stats
+  - Napoli: https://datamb.football/Napoli_Team_stats
+  - Parma: https://datamb.football/Parma_Team_stats
+  - Roma: https://datamb.football/Roma_Team_stats
+  - Torino: https://datamb.football/Torino_Team_stats
+  - Udinese: https://datamb.football/Udinese_Team_stats
+  - Venezia: https://datamb.football/Venezia_Team_stats

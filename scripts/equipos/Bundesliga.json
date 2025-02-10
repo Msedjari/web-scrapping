@@ -1,0 +1,326 @@
+[
+    {
+        "club_name": "Bayern Múnich",
+        "president": "",
+        "coach": "Vincent Kompany",
+        "foundation_year": "1900",
+        "website": "https://fcbayern.com/en",
+        "stadium": {
+            "name": "ALLIANZ ARENA",
+            "capacity": "75000",
+            "address": "Säbener Strasse, 51-5781547, München",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/156/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/fc-bayern-munchen/"
+    },
+    {
+        "club_name": "Bayer Leverkusen",
+        "president": "",
+        "coach": "Xabi Alonso",
+        "foundation_year": "1904",
+        "website": "https://www.bayer04.de/",
+        "stadium": {
+            "name": "BAYARENA",
+            "capacity": "30210",
+            "address": "Bismarckstraße, 122-12451373, Leverkusen",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/164/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/bayer-04-leverkusen/"
+    },
+    {
+        "club_name": "Eintracht Frankfurt",
+        "president": "",
+        "coach": "Dino Toppmöller",
+        "foundation_year": "1899",
+        "website": "https://www.eintracht.de/",
+        "stadium": {
+            "name": "DEUTSCHE BANK PARK",
+            "capacity": "51500",
+            "address": "Mörfelder Landstraße, 36260527, Frankfurt am Main",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/159/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/eintracht-frankfurt/"
+    },
+    {
+        "club_name": "RB Leipzig",
+        "president": "",
+        "coach": "Marco Rose",
+        "foundation_year": "2009",
+        "website": "https://www.dierotenbullen.com/",
+        "stadium": {
+            "name": "RED BULL ARENA",
+            "capacity": "42558",
+            "address": "Neumarkt, 29-3304109, Leipzig",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/6339/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/rb-leipzig/"
+    },
+    {
+        "club_name": "Stuttgart",
+        "president": "",
+        "coach": "Sebastian Hoeneß",
+        "foundation_year": "1893",
+        "website": "https://www.vfb.de/",
+        "stadium": {
+            "name": "MHPARENA",
+            "capacity": "60449",
+            "address": "Mercedesstraße, 10970372, Stuttgart",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/169/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/vfb-stuttgart/"
+    },
+    {
+        "club_name": "Sport-Club Freiburg",
+        "president": "",
+        "coach": "Julian Schuster",
+        "foundation_year": "1904",
+        "website": "https://www.scfreiburg.com/",
+        "stadium": {
+            "name": "EUROPA-PARK STADION",
+            "capacity": "34700",
+            "address": "Schwarzwaldstraße, 19379117, Freiburg im Breisgau",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/160/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/sport-club-freiburg/"
+    },
+    {
+        "club_name": "1. FSV Mainz 05",
+        "president": "",
+        "coach": "Bo Henriksen",
+        "foundation_year": "1905",
+        "website": "https://www.mainz05.de/",
+        "stadium": {
+            "name": "MEWA ARENA",
+            "capacity": "34000",
+            "address": "Isaac-Fulda-Allee, 555124, Mainz",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/810/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/1--fsv-mainz-05/"
+    },
+    {
+        "club_name": "Borussia Mönchengladbach",
+        "president": "",
+        "coach": "Gerardo Seoane",
+        "foundation_year": "1900",
+        "website": "https://www.borussia.de/",
+        "stadium": {
+            "name": "BORUSSIA-PARK",
+            "capacity": "54022",
+            "address": "Hennes-Weisweiler-Allee, 141179, Mönchengladbach",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/683/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/borussia-monchengladbach/"
+    },
+    {
+        "club_name": "VfL Wolfsburg",
+        "president": "",
+        "coach": "Ralph Hasenhüttl",
+        "foundation_year": "1945",
+        "website": "https://www.vfl-wolfsburg.de/",
+        "stadium": {
+            "name": "VOLKSWAGEN ARENA",
+            "capacity": "30000",
+            "address": "In den Allerwiesen, 138446, Wolfsburg",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/172/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/vfl-wolfsburg/"
+    },
+    {
+        "club_name": "SV Werder Bremen",
+        "president": "",
+        "coach": "Ole Werner",
+        "foundation_year": "1899",
+        "website": "https://www.werder.de/",
+        "stadium": {
+            "name": "WESERSTADION",
+            "capacity": "42100",
+            "address": "Franz-Böhmert-Straße, 1c28205, Bremen",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/171/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/sv-werder-bremen/"
+    },
+    {
+        "club_name": "Borussia Dortmund",
+        "president": "",
+        "coach": "Niko Kovac",
+        "foundation_year": "1909",
+        "website": "https://www.bvb.de/",
+        "stadium": {
+            "name": "SIGNAL IDUNA PARK",
+            "capacity": "81365",
+            "address": "Rheinlanddamm, 207-20944137, Dortmund",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/157/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/borussia-dortmund/"
+    },
+    {
+        "club_name": "FC Augsburg",
+        "president": "",
+        "coach": "Jess Thorup",
+        "foundation_year": "1907",
+        "website": "https://www.fcaugsburg.de/",
+        "stadium": {
+            "name": "WWK ARENA",
+            "capacity": "30660",
+            "address": "Donauwörther Straße, 17086154, Augsburg",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/1772/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/fc-augsburg/"
+    },
+    {
+        "club_name": "1. FC Union Berlin",
+        "president": "",
+        "coach": "Steffen Baumgart",
+        "foundation_year": "1966",
+        "website": "https://www.fc-union-berlin.de/",
+        "stadium": {
+            "name": "AN DER ALTEN FÖRSTEREI",
+            "capacity": "22012",
+            "address": "An der Wuhlheide, 26312555, Berlin",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/816/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/1--fc-union-berlin/"
+    },
+    {
+        "club_name": "FC St. Pauli",
+        "president": "",
+        "coach": "Alexander Blessin",
+        "foundation_year": "1910",
+        "website": "https://www.fcstpauli.com/",
+        "stadium": {
+            "name": "MILLERNTOR-STADION",
+            "capacity": "29546",
+            "address": "Heiligengeistfeld, 120359, Hamburg",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/680/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/fc-st--pauli/"
+    },
+    {
+        "club_name": "TSG 1899 Hoffenheim",
+        "president": "",
+        "coach": "Christian Ilzer",
+        "foundation_year": "1899",
+        "website": "https://www.achtzehn99.de/",
+        "stadium": {
+            "name": "PREZERO ARENA",
+            "capacity": "30150",
+            "address": "Horrenberger Straße, 5874939, Zuzenhausen",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/1902/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/tsg-1899-hoffenheim/"
+    },
+    {
+        "club_name": "1. FC Heidenheim 1846",
+        "president": "",
+        "coach": "Frank Schmidt",
+        "foundation_year": "2007",
+        "website": "https://www.fc-heidenheim.de/",
+        "stadium": {
+            "name": "VOITH-ARENA",
+            "capacity": "15000",
+            "address": "Schloßhaustraße, 16289522, Heidenheim",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/2891/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/1--fc-heidenheim-1846/"
+    },
+    {
+        "club_name": "Holstein Kiel",
+        "president": "",
+        "coach": "Marcel Rapp",
+        "foundation_year": "1900",
+        "website": "https://www.holstein-kiel.de/",
+        "stadium": {
+            "name": "HOLSTEIN-STADION",
+            "capacity": "12000",
+            "address": "Steenbeker Weg, 15024106, Kiel",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/2881/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/holstein-kiel/"
+    },
+    {
+        "club_name": "VfL Bochum 1848",
+        "president": "",
+        "coach": "Dieter Hecking",
+        "foundation_year": "1848",
+        "website": "https://www.vfl-bochum.de/",
+        "stadium": {
+            "name": "VONOVIA RUHRSTADION",
+            "capacity": "27599",
+            "address": "Castroper Straße, 14544791, Bochum",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/431/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-alemana/vfl-bochum-1848/"
+    }
+]

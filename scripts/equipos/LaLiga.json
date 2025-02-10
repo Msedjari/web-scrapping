@@ -1,0 +1,362 @@
+[
+    {
+        "club_name": "Real Madrid",
+        "president": "Florentino Pérez",
+        "coach": "Carlo Ancelotti",
+        "foundation_year": "1902",
+        "website": "https://www.realmadrid.com/",
+        "stadium": {
+            "name": "SANTIAGO BERNABÉU",
+            "capacity": "81044",
+            "address": "Avda. de Concha Espina, 128036, Madrid",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/186/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/186/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/186/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/real-madrid/"
+    },
+    {
+        "club_name": "Atlético de Madrid",
+        "president": "Enrique Cerezo",
+        "coach": "Diego Simeone",
+        "foundation_year": "1903",
+        "website": "https://www.clubatleticodemadrid.com/",
+        "stadium": {
+            "name": "RIYADH AIR METROPOLITANO",
+            "capacity": "70460",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/175/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/175/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/175/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/atletico-de-madrid/"
+    },
+    {
+        "club_name": "Barcelona",
+        "president": "Joan Laporta",
+        "coach": "Hans-Dieter Flick",
+        "foundation_year": "1899",
+        "website": "https://www.fcbarcelona.com/",
+        "stadium": {
+            "name": "ESTADI OLÍMPIC LLUÍS COMPANYS",
+            "capacity": "55000",
+            "address": "Avda. Arístides Maillol, 8028, Barcelona",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/178/estadio.jpeg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/178/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/178/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/barcelona/"
+    },
+    {
+        "club_name": "Athletic Club",
+        "president": "Jon Uriarte",
+        "coach": "Ernesto Valverde",
+        "foundation_year": "1898",
+        "website": "https://www.athletic-club.net/",
+        "stadium": {
+            "name": "SAN MAMÉS",
+            "capacity": "53332",
+            "address": "C/ Ibaigane, Alameda Mazarredo, 2348009, Bilbao",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/174/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/174/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/174/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/athletic-club/"
+    },
+    {
+        "club_name": "Villarreal",
+        "president": "Fernando Roig Alfonso",
+        "coach": "Marcelino García",
+        "foundation_year": "1923",
+        "website": "https://www.villarrealcf.es/",
+        "stadium": {
+            "name": "ESTADIO DE LA CERÁMICA",
+            "capacity": "23500",
+            "address": "Camino Miralcampo, 12540, Castellón",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/449/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/449/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/449/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/villarreal/"
+    },
+    {
+        "club_name": "Rayo Vallecano",
+        "president": "Raúl Martín",
+        "coach": "Iñigo Pérez",
+        "foundation_year": "1924",
+        "website": "https://www.rayovallecano.es/",
+        "stadium": {
+            "name": "ESTADIO DE VALLECAS",
+            "capacity": "14505",
+            "address": "C/ del Payaso Fofó, S/N28018, Madrid",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/184/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/184/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/184/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/rayo-vallecano/"
+    },
+    {
+        "club_name": "Real Sociedad",
+        "president": "Jokin Aperribay",
+        "coach": "Imanol Alguacil",
+        "foundation_year": "1909",
+        "website": "https://www.realsociedad.com/",
+        "stadium": {
+            "name": "REALE ARENA",
+            "capacity": "40000",
+            "address": "Paseo de Anoeta, 120014, San Sebastián (Guipúzcoa)",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/188/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/188/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/188/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/real-sociedad/"
+    },
+    {
+        "club_name": "Girona",
+        "president": "Delfí Geli",
+        "coach": "Míchel Sánchez",
+        "foundation_year": "1930",
+        "website": "https://",
+        "stadium": {
+            "name": "MUNICIPAL DE MONTILIVI",
+            "capacity": "14286",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/2893/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/2893/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/2893/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/girona/"
+    },
+    {
+        "club_name": "Osasuna",
+        "president": "Luis Sabalza",
+        "coach": "Vicente Moreno",
+        "foundation_year": "1920",
+        "website": "https://www.osasuna.es/",
+        "stadium": {
+            "name": "EL SADAR",
+            "capacity": "23576",
+            "address": "C/ Sadar, 31006, Pamplona",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/450/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/450/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/450/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/osasuna/"
+    },
+    {
+        "club_name": "Mallorca",
+        "president": "Andy Kohlberg",
+        "coach": "Jagoba Arrasate",
+        "foundation_year": "1916",
+        "website": "https://www.rcdmallorca.es/",
+        "stadium": {
+            "name": "ESTADI MALLORCA SON MOIX",
+            "capacity": "26020",
+            "address": "Camí dels Reis, 7011, Palma de Mallorca",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/181/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/181/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/181/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/mallorca/"
+    },
+    {
+        "club_name": "Real Betis",
+        "president": "Ángel Haro García",
+        "coach": "Manuel Pellegrini",
+        "foundation_year": "1907",
+        "website": "https://www.realbetisbalompie.es/",
+        "stadium": {
+            "name": "BENITO VILLAMARÍN",
+            "capacity": "60721",
+            "address": "Avda. Heliópolis, S/N41012, Sevilla",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/185/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/185/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/185/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/real-betis/"
+    },
+    {
+        "club_name": "Celta de Vigo",
+        "president": "Marián Mouriño",
+        "coach": "Claudio Giráldez",
+        "foundation_year": "1923",
+        "website": "https://www.celtavigo.net/",
+        "stadium": {
+            "name": "ESTADIO ABANCA-BALAÍDOS",
+            "capacity": "24791",
+            "address": "C/ Conde de Gondomar, 136203, Vigo, Pontevedra",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/176/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/176/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/176/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/celta-de-vigo/"
+    },
+    {
+        "club_name": "Sevilla",
+        "president": "José María de Nido Carrasco",
+        "coach": "Francisco Javier García Pimienta",
+        "foundation_year": "1890",
+        "website": "https://www.sevillacf.es/",
+        "stadium": {
+            "name": "RAMÓN SÁNCHEZ-PIZJUÁN",
+            "capacity": "44000",
+            "address": "C/ Sevilla Fútbol Club, 41005, Sevilla",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/179/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/179/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/179/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/sevilla/"
+    },
+    {
+        "club_name": "Getafe",
+        "president": "Ángel Torres Sánchez",
+        "coach": "José Bordalás",
+        "foundation_year": "1983",
+        "website": "https://www.getafecf.com/",
+        "stadium": {
+            "name": "ESTADIO COLISEUM",
+            "capacity": "17393",
+            "address": "Avda. Teresa de Calcuta, 28903, Madrid",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/1450/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/1450/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/1450/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/getafe/"
+    },
+    {
+        "club_name": "Las Palmas",
+        "president": "Miguel Ángel Ramírez",
+        "coach": "Diego Martínez",
+        "foundation_year": "1949",
+        "website": "https://www.udlaspalmas.es/",
+        "stadium": {
+            "name": "ESTADIO GRAN CANARIA",
+            "capacity": "32392",
+            "address": "Avenida Pío XII, 2935005, Las Palmas",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/407/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/407/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/407/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/las-palmas/"
+    },
+    {
+        "club_name": "Espanyol",
+        "president": "Chen Yansheng",
+        "coach": "José Manuel González Álvarez",
+        "foundation_year": "1900",
+        "website": "https://www.rcdespanyol.com/",
+        "stadium": {
+            "name": "RCDE STADIUM",
+            "capacity": "40000",
+            "address": "Paseo Olímpico, 17-198038, Barcelona",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/177/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/177/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/177/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/espanyol/"
+    },
+    {
+        "club_name": "Leganés",
+        "president": "Jeff Luhnow",
+        "coach": "Borja Jiménez",
+        "foundation_year": "1928",
+        "website": "https://",
+        "stadium": {
+            "name": "BUTARQUE",
+            "capacity": "11454",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/957/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/957/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/957/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/leganes/"
+    },
+    {
+        "club_name": "Valencia CF",
+        "president": "Lay Hoon Chan",
+        "coach": "Carlos Corberán",
+        "foundation_year": "1919",
+        "website": "https://www.valenciacf.es/",
+        "stadium": {
+            "name": "MESTALLA",
+            "capacity": "56000",
+            "address": "C/ Pintor Monleón, 446023, Valencia",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/191/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/191/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/191/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/valencia-cf/"
+    },
+    {
+        "club_name": "Alavés",
+        "president": "Alfonso Fernández",
+        "coach": "Eduardo Coudet",
+        "foundation_year": "1921",
+        "website": "https://",
+        "stadium": {
+            "name": "MENDIZORROZA",
+            "capacity": "19840",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/173/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/173/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/173/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/alaves/"
+    },
+    {
+        "club_name": "Real Valladolid",
+        "president": "Ronaldo Luis Nazário de Lima",
+        "coach": "Diego Cocca",
+        "foundation_year": "1928",
+        "website": "https://www.realvalladolid.es/",
+        "stadium": {
+            "name": "JOSÉ ZORRILLA",
+            "capacity": "27618",
+            "address": "Avda. Mundial 82, 47014, Valladolid",
+            "image": "https://www.lne.es/deportes/ed/img/equipos/192/estadio.jpg"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/192/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/img/equipos/192/plantilla.jpeg"
+        },
+        "url": "https://www.lne.es/deportes/futbol/primera-division/real-valladolid/"
+    }
+]

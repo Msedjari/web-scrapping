@@ -1,0 +1,290 @@
+[
+    {
+        "club_name": "PSG",
+        "president": "Nasser Al-Khelaifi",
+        "coach": "Luis Enrique Martínez García",
+        "foundation_year": "1970",
+        "website": "https://www.psg.fr/",
+        "stadium": {
+            "name": "PARC DES PRINCES",
+            "capacity": "48712",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/149/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/paris-saint-germain/"
+    },
+    {
+        "club_name": "Marseille",
+        "president": "",
+        "coach": "Roberto De Zerbi",
+        "foundation_year": "1899",
+        "website": "https://www.om.net/",
+        "stadium": {
+            "name": "ORANGE VÉLODROME",
+            "capacity": "67354",
+            "address": "25 rue Négresko13267, Marseille",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/144/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/marseille/"
+    },
+    {
+        "club_name": "Nice",
+        "president": "Jean-Pierre Rivere",
+        "coach": "Franck Haise",
+        "foundation_year": "1904",
+        "website": "https://www.ogcnice.com/",
+        "stadium": {
+            "name": "ALLIANZ RIVIERA",
+            "capacity": "35624",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/1395/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/nice/"
+    },
+    {
+        "club_name": "Mónaco",
+        "president": "Dmitriy Rybolovlev",
+        "coach": "Adi Hütter",
+        "foundation_year": "1924",
+        "website": "https://www.asm-fc.com/",
+        "stadium": {
+            "name": "STADE LOUIS-II",
+            "capacity": "18500",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/146/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/monaco/"
+    },
+    {
+        "club_name": "Lille",
+        "president": "",
+        "coach": "Bruno Génésio",
+        "foundation_year": "1944",
+        "website": "https://www.losc.fr/",
+        "stadium": {
+            "name": "DECATHLON ARENA - STADE PIERRE-MAUROY",
+            "capacity": "50186",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/429/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/lille/"
+    },
+    {
+        "club_name": "Lyon",
+        "president": "Jean-Michel Aulas",
+        "coach": "Paulo Alexandre Rodrigues Fonseca",
+        "foundation_year": "1950",
+        "website": "https://www.olweb.fr/",
+        "stadium": {
+            "name": "GROUPAMA STADIUM",
+            "capacity": "59500",
+            "address": "350 Avenue Jean-Jaurès69007, Lyon",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/143/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/lyon/"
+    },
+    {
+        "club_name": "Lens",
+        "president": "",
+        "coach": "Will Still",
+        "foundation_year": "1906",
+        "website": "https://www.rclens.fr/",
+        "stadium": {
+            "name": "STADE FÉLIX BOLLAERT-DELÉLIS",
+            "capacity": "41229",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/142/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/lens/"
+    },
+    {
+        "club_name": "Brest",
+        "president": "",
+        "coach": "Éric Roy",
+        "foundation_year": "1950",
+        "website": "https://www.sb29.com/",
+        "stadium": {
+            "name": "STADE FRANCIS-LE BLÉ",
+            "capacity": "15097",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/862/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/brest/"
+    },
+    {
+        "club_name": "Strasbourg",
+        "president": "",
+        "coach": "Liam Rosenior",
+        "foundation_year": "1906",
+        "website": "https://",
+        "stadium": {
+            "name": "STADE DE LA MEINAU",
+            "capacity": "41228",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/153/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/strasbourg/"
+    },
+    {
+        "club_name": "Toulouse",
+        "president": "",
+        "coach": "Carles Martínez",
+        "foundation_year": "1970",
+        "website": "https://www.tfc.info/",
+        "stadium": {
+            "name": "STADIUM DE TOULOUSE",
+            "capacity": "35470",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/427/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/toulouse/"
+    },
+    {
+        "club_name": "Rennes",
+        "president": "",
+        "coach": "Habib Beye",
+        "foundation_year": "1901",
+        "website": "https://www.staderennais.com/",
+        "stadium": {
+            "name": "ROAZHON PARK",
+            "capacity": "29376",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/150/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/rennes/"
+    },
+    {
+        "club_name": "Angers",
+        "president": "",
+        "coach": "Alexandre Dujeux",
+        "foundation_year": "1919",
+        "website": "https://www.angers-sco.fr/",
+        "stadium": {
+            "name": "STADE RAYMOND KOPA",
+            "capacity": "18000",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/2128/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/angers/"
+    },
+    {
+        "club_name": "Reims",
+        "president": "Jean-Pierre Caillot",
+        "coach": "Samba Diawara",
+        "foundation_year": "1931",
+        "website": "https://www.stade-de-reims.com/",
+        "stadium": {
+            "name": "STADE AUGUSTE-DELAUNE II",
+            "capacity": "21684",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/1423/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/reims/"
+    },
+    {
+        "club_name": "Nantes",
+        "president": "Waldemar Kita",
+        "coach": "Antoine Kombouaré",
+        "foundation_year": "1943",
+        "website": "https://www.fcnantes.com/",
+        "stadium": {
+            "name": "LA BEAUJOIRE-LOUIS-FONTENEAU",
+            "capacity": "38285",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/430/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/nantes/"
+    },
+    {
+        "club_name": "Le Havre",
+        "president": "",
+        "coach": "Didier Digard",
+        "foundation_year": "1872",
+        "website": "https://www.hac-foot.com/",
+        "stadium": {
+            "name": "STADE OCÉANE",
+            "capacity": "25178",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/141/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/le-havre/"
+    },
+    {
+        "club_name": "Montpellier",
+        "president": "Laurent Nicollin",
+        "coach": "Jean-Louis Gasset",
+        "foundation_year": "1974",
+        "website": "https://www.mhscfoot.com/",
+        "stadium": {
+            "name": "STADE DE LA MOSSON-MONDIAL 98",
+            "capacity": "32900",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/147/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/liga-francesa/montpellier/"
+    }
+]

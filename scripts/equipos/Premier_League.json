@@ -1,0 +1,362 @@
+[
+    {
+        "club_name": "Liverpool",
+        "president": "",
+        "coach": "Arne Slot",
+        "foundation_year": "1892",
+        "website": "https://www.liverpoolfc.tv/",
+        "stadium": {
+            "name": "ANFIELD",
+            "capacity": "61276",
+            "address": "Anfield RoadL4 0TH, Liverpool",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/14/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/liverpool/"
+    },
+    {
+        "club_name": "Arsenal",
+        "president": "",
+        "coach": "Mikel Arteta",
+        "foundation_year": "1886",
+        "website": "https://www.arsenal.com/",
+        "stadium": {
+            "name": "EMIRATES STADIUM",
+            "capacity": "60272",
+            "address": "75 Drayton ParkN5 1BU, London",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/3/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/arsenal/"
+    },
+    {
+        "club_name": "Nottingham Forest",
+        "president": "",
+        "coach": "Nuno Herlander Simões Espírito Santo",
+        "foundation_year": "1865",
+        "website": "https://",
+        "stadium": {
+            "name": "THE CITY GROUND",
+            "capacity": "30602",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/17/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/nottingham-forest/"
+    },
+    {
+        "club_name": "Chelsea",
+        "president": "",
+        "coach": "Enzo Maresca",
+        "foundation_year": "1905",
+        "website": "https://www.chelseafc.com/",
+        "stadium": {
+            "name": "STAMFORD BRIDGE",
+            "capacity": "41798",
+            "address": "Fulham RoadSW6 1HS, London",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/8/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/chelsea/"
+    },
+    {
+        "club_name": "Manchester City",
+        "president": "",
+        "coach": "Pep Guardiola",
+        "foundation_year": "1887",
+        "website": "https://",
+        "stadium": {
+            "name": "ETIHAD STADIUM",
+            "capacity": "55000",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/43/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/manchester-city/"
+    },
+    {
+        "club_name": "Newcastle United",
+        "president": "",
+        "coach": "Eddie Howe",
+        "foundation_year": "1892",
+        "website": "https://",
+        "stadium": {
+            "name": "ST. JAMES' PARK",
+            "capacity": "52405",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/4/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/newcastle-united/"
+    },
+    {
+        "club_name": "Bournemouth",
+        "president": "",
+        "coach": "Andoni Iraola",
+        "foundation_year": "1899",
+        "website": "https://",
+        "stadium": {
+            "name": "VITALITY STADIUM",
+            "capacity": "11464",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/91/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/bournemouth/"
+    },
+    {
+        "club_name": "Aston Villa",
+        "president": "",
+        "coach": "Unai Emery",
+        "foundation_year": "1874",
+        "website": "https://",
+        "stadium": {
+            "name": "VILLA PARK",
+            "capacity": "42682",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/7/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/aston-villa/"
+    },
+    {
+        "club_name": "Fulham",
+        "president": "",
+        "coach": "Marco Alexandre Saraiva da Silva",
+        "foundation_year": "1879",
+        "website": "https://",
+        "stadium": {
+            "name": "CRAVEN COTTAGE",
+            "capacity": "25700",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/54/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/fulham/"
+    },
+    {
+        "club_name": "Brighton and Hove Albion",
+        "president": "",
+        "coach": "Fabian Hürzeler",
+        "foundation_year": "1901",
+        "website": "https://",
+        "stadium": {
+            "name": "AMERICAN EXPRESS STADIUM",
+            "capacity": "30750",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/36/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/brighton-and-hove-albion/"
+    },
+    {
+        "club_name": "Brentford",
+        "president": "",
+        "coach": "Thomas Frank",
+        "foundation_year": "1889",
+        "website": "https://",
+        "stadium": {
+            "name": "GTECH COMMUNITY STADIUM",
+            "capacity": "17250",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/94/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/brentford/"
+    },
+    {
+        "club_name": "Crystal Palace",
+        "president": "",
+        "coach": "Oliver Glasner",
+        "foundation_year": "1861",
+        "website": "https://",
+        "stadium": {
+            "name": "SELHURST PARK",
+            "capacity": "25073",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/31/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/crystal-palace/"
+    },
+    {
+        "club_name": "Manchester United",
+        "president": "",
+        "coach": "Ruben Filipe Marques Diogo Amorim",
+        "foundation_year": "1878",
+        "website": "https://www.manutd.com/",
+        "stadium": {
+            "name": "OLD TRAFFORD",
+            "capacity": "75635",
+            "address": "Sir Matt Busby WayM16 0RA, Manchester",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/1/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/manchester-united/"
+    },
+    {
+        "club_name": "Tottenham Hotspur",
+        "president": "",
+        "coach": "Ange Postecoglou",
+        "foundation_year": "1882",
+        "website": "https://",
+        "stadium": {
+            "name": "TOTTENHAM HOTSPUR STADIUM",
+            "capacity": "62850",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/6/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/tottenham-hotspur/"
+    },
+    {
+        "club_name": "West Ham United",
+        "president": "",
+        "coach": "Graham Potter",
+        "foundation_year": "1895",
+        "website": "https://",
+        "stadium": {
+            "name": "LONDON STADIUM",
+            "capacity": "62500",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/21/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/west-ham-united/"
+    },
+    {
+        "club_name": "Everton",
+        "president": "",
+        "coach": "David Moyes",
+        "foundation_year": "1878",
+        "website": "https://",
+        "stadium": {
+            "name": "GOODISON PARK",
+            "capacity": "39571",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/11/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/everton/"
+    },
+    {
+        "club_name": "Wolverhampton Wanderers",
+        "president": "",
+        "coach": "Vítor Manuel de Oliveira Lopes Pereira",
+        "foundation_year": "1877",
+        "website": "https://",
+        "stadium": {
+            "name": "MOLINEUX STADIUM",
+            "capacity": "31500",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/39/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/wolverhampton-wanderers/"
+    },
+    {
+        "club_name": "Leicester City",
+        "president": "",
+        "coach": "Ruud van Nistelrooij",
+        "foundation_year": "1884",
+        "website": "https://",
+        "stadium": {
+            "name": "KING POWER STADIUM",
+            "capacity": "32312",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/13/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/leicester-city/"
+    },
+    {
+        "club_name": "Ipswich Town",
+        "president": "",
+        "coach": "Kieran McKenna",
+        "foundation_year": "1878",
+        "website": "https://",
+        "stadium": {
+            "name": "PORTMAN ROAD",
+            "capacity": "30300",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/40/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/ipswich-town/"
+    },
+    {
+        "club_name": "Southampton",
+        "president": "",
+        "coach": "Ivan Juric",
+        "foundation_year": "1885",
+        "website": "https://",
+        "stadium": {
+            "name": "ST. MARY'S STADIUM",
+            "capacity": "32505",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/20/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/premier-league/southampton/"
+    }
+]

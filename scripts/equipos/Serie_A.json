@@ -1,0 +1,362 @@
+[
+    {
+        "club_name": "Napoli",
+        "president": "Aurelio de Laurentiis",
+        "coach": "Antonio Conte",
+        "foundation_year": "1926",
+        "website": "https://www.sscnapoli.it/",
+        "stadium": {
+            "name": "DIEGO ARMANDO MARADONA",
+            "capacity": "60240",
+            "address": "Strada Statale Domitiana, Km 35,580130, Castelvolturno",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/459/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/napoli/"
+    },
+    {
+        "club_name": "Inter",
+        "president": "Giuseppe Marotta",
+        "coach": "Simone Inzaghi",
+        "foundation_year": "1908",
+        "website": "https://www.inter.it/",
+        "stadium": {
+            "name": "STADIO GIUSEPPE MEAZZA",
+            "capacity": "80074",
+            "address": "Corso Vittorio Emanuele II, 920122, Milano",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/127/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/internazionale/"
+    },
+    {
+        "club_name": "Atalanta",
+        "president": "Antonio Percassi",
+        "coach": "Gian Piero Gasperini",
+        "foundation_year": "1907",
+        "website": "https://www.atalanta.it/",
+        "stadium": {
+            "name": "GEWISS STADIUM",
+            "capacity": "26724",
+            "address": "Corso Europa, 4624040, Zingonia di Ciserano",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/456/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/atalanta/"
+    },
+    {
+        "club_name": "Lazio",
+        "president": "Claudio Lotito",
+        "coach": "Marco Baroni",
+        "foundation_year": "1900",
+        "website": "https://www.sslazio.it/",
+        "stadium": {
+            "name": "STADIO OLIMPICO",
+            "capacity": "72698",
+            "address": "Via di Santa Cornelia, 1000.00060, Roma",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/129/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/lazio/"
+    },
+    {
+        "club_name": "Juventus",
+        "president": "Gianluca Ferrero",
+        "coach": "Thiago Motta",
+        "foundation_year": "1897",
+        "website": "https://www.juventus.com/",
+        "stadium": {
+            "name": "ALLIANZ STADIUM",
+            "capacity": "41507",
+            "address": "C.so Galileo Ferraris 3210128, Torino",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/128/escudo_med.jpg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/juventus/"
+    },
+    {
+        "club_name": "Fiorentina",
+        "president": "Rocco Commisso",
+        "coach": "Raffaele Palladino",
+        "foundation_year": "1926",
+        "website": "https://it.violachannel.tv/",
+        "stadium": {
+            "name": "ARTEMIO FRANCHI",
+            "capacity": "47415",
+            "address": "Viale Manfredo Fanti, 450137, Firenze",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/125/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/fiorentina/"
+    },
+    {
+        "club_name": "Milan",
+        "president": "Paolo Scaroni",
+        "coach": "Sérgio Paulo Marceneiro da Conceição",
+        "foundation_year": "1899",
+        "website": "https://www.acmilan.com/",
+        "stadium": {
+            "name": "STADIO GIUSEPPE MEAZZA",
+            "capacity": "80074",
+            "address": "Via Filippo Turati 320121, Milano",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/120/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/milan/"
+    },
+    {
+        "club_name": "Bolonia",
+        "president": "Joey Saputo",
+        "coach": "Vincenzo Italiano",
+        "foundation_year": "1909",
+        "website": "https://www.bolognafc.it/",
+        "stadium": {
+            "name": "RENATO DALL'ARA",
+            "capacity": "38279",
+            "address": "Via Casteldebole, 1040132, Bologna",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/123/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/bologna/"
+    },
+    {
+        "club_name": "Roma",
+        "president": "Dan Friedkin",
+        "coach": "Claudio Ranieri",
+        "foundation_year": "1927",
+        "website": "https://www.asroma.it/",
+        "stadium": {
+            "name": "STADIO OLIMPICO",
+            "capacity": "72698",
+            "address": "Via di Trigoria, Km 3,600.00128, Roma",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/121/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/roma/"
+    },
+    {
+        "club_name": "Udinese",
+        "president": "Franco Soldati",
+        "coach": "Kosta Runjaic",
+        "foundation_year": "1896",
+        "website": "https://www.udinese.it/",
+        "stadium": {
+            "name": "BLUENERGY STADIUM",
+            "capacity": "25144",
+            "address": "Via A. e A. Candolini, 233100, Udine",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/136/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/udinese/"
+    },
+    {
+        "club_name": "Torino",
+        "president": "Urbano Cairo",
+        "coach": "Paolo Vanoli",
+        "foundation_year": "1906",
+        "website": "https://www.torinofc.it/",
+        "stadium": {
+            "name": "OLIMPICO GRANDE TORINO",
+            "capacity": "27958",
+            "address": "Via Arcivescovado, 110121, Torino",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/135/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/torino/"
+    },
+    {
+        "club_name": "Genoa",
+        "president": "Alberto Zangrillo",
+        "coach": "Patrick Vieira",
+        "foundation_year": "1893",
+        "website": "https://www.genoacfc.it/",
+        "stadium": {
+            "name": "LUIGI FERRARIS",
+            "capacity": "36685",
+            "address": "Via Ronchi, 6716155, Genova Pegli",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/990/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/genoa/"
+    },
+    {
+        "club_name": "Cagliari",
+        "president": "Tommaso Giulini",
+        "coach": "Davide Nicola",
+        "foundation_year": "1920",
+        "website": "https://www.cagliaricalcio.net/",
+        "stadium": {
+            "name": "UNIPOL DOMUS",
+            "capacity": "16233",
+            "address": "Viale La Plaia 159123, Cagliari",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/124/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/cagliari/"
+    },
+    {
+        "club_name": "Lecce",
+        "president": "Saverio Damiani",
+        "coach": "Marco Giampaolo",
+        "foundation_year": "1908",
+        "website": "https://www.uslecce.it/",
+        "stadium": {
+            "name": "STADIO ETTORE GIARDINIERO - VIA DEL MARE",
+            "capacity": "33876",
+            "address": "via Templari 1173100, Lecce",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/130/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/lecce/"
+    },
+    {
+        "club_name": "Verona",
+        "president": "Maurizio Setti",
+        "coach": "Paolo Zanetti",
+        "foundation_year": "1903",
+        "website": "https://",
+        "stadium": {
+            "name": "STADIO MARCANTONIO BENTEGODI",
+            "capacity": "39211",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/126/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/verona/"
+    },
+    {
+        "club_name": "Como",
+        "president": "Mirwan Suwarso",
+        "coach": "Cesc Fàbregas",
+        "foundation_year": "1907",
+        "website": "https://",
+        "stadium": {
+            "name": "GIUSEPPE SINIGAGLIA",
+            "capacity": "13602",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/1065/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/como/"
+    },
+    {
+        "club_name": "Empoli",
+        "president": "Fabrizio Corsi",
+        "coach": "Roberto D'Aversa",
+        "foundation_year": "1920",
+        "website": "https://",
+        "stadium": {
+            "name": "STADIO CARLO CASTELLANI – COMPUTER GROSS ARENA",
+            "capacity": "19795",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/695/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/empoli/"
+    },
+    {
+        "club_name": "Parma",
+        "president": "Kyle Krause",
+        "coach": "Fabio Pecchia",
+        "foundation_year": "1913",
+        "website": "https://www.fcparma.com/",
+        "stadium": {
+            "name": "ENNIO TARDINI",
+            "capacity": "22885",
+            "address": "Viale Partigiani d'Italia, 143100, Parma",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/131/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/parma/"
+    },
+    {
+        "club_name": "Venezia",
+        "president": "Duncan Niederauer",
+        "coach": "Eusebio Di Francesco",
+        "foundation_year": "1907",
+        "website": "https://",
+        "stadium": {
+            "name": "PIER LUIGI PENZO",
+            "capacity": "11150",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/137/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/venezia/"
+    },
+    {
+        "club_name": "Monza",
+        "president": "Paolo Berlusconi",
+        "coach": "Alessandro Nesta",
+        "foundation_year": "",
+        "website": "https://",
+        "stadium": {
+            "name": "U-POWER STADIUM",
+            "capacity": "18658",
+            "address": "",
+            "image": "https://www.lne.es/deportes/ed/"
+        },
+        "images": {
+            "escudo": "https://www.lne.es/deportes/ed/img/equipos/742/escudo_med.jpeg",
+            "plantilla": "https://www.lne.es/deportes/ed/"
+        },
+        "url": "https://www.lne.es/deportes/futbol/calcio-serie-a/monza/"
+    }
+]
