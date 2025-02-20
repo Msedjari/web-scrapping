@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Partidos</title>
+</head>
+<body>
+    <h1>Partidos Recientes</h1>
+    <table border="1">
+        <tr>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th>Marcador Local</th>
+            <th>Marcador Visitante</th>
+            <th>Hora del Partido</th>
+        </tr>
+        {% for match in matches %}
+        <tr>
+            <td>{{ match.team_home }}</td>
+            <td>{{ match.team_away }}</td>
+            <td>{{ match.score_home }}</td>
+            <td>{{ match.score_away }}</td>
+            <td>{{ match.match_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

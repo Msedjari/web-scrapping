@@ -1,9 +1,12 @@
 <?php
-
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$loader = new FilesystemLoader(__DIR__ . '/../templates'); // Ruta a las plantillas
-return new Environment($loader);
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../templates');
+$twig = new \Twig\Environment($loader, [
+    'cache' => false, // Cambiar a __DIR__ . '/../cache' en producción
+]);
+
+function render($template, $params = []) {
+    global $twig;
+    echo $twig->render($template, $params);
+}

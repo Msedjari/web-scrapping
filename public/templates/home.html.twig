@@ -1,8 +1,95 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inicio{% endblock %}
+{% block title %}Inicio - Fastscore{% endblock %}
 
 {% block content %}
-<h1>Bienvenido a Mi Proyecto</h1>
-<p>Este es un proyecto con Twig.</p>
+<div class="row">
+    <div class="col-md-8">
+        <!-- Últimos Partidos -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">
+                <i class="fas fa-trophy"></i> Últimos Partidos
+                <a href="/matches" class="btn btn-sm btn-primary float-end">Ver todos</a>
+            </h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Local</th>
+                            <th>Visitante</th>
+                            <th>Resultado</th>
+                            <th>Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for match in matches %}
+                        <tr>
+                            <td>{{ match.team_home }}</td>
+                            <td>{{ match.team_away }}</td>
+                            <td><span class="badge bg-primary">{{ match.score_home }} - {{ match.score_away }}</span></td>
+                            <td><i class="far fa-clock"></i> {{ match.match_time }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Últimas Noticias -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">
+                <i class="far fa-newspaper"></i> Últimas Noticias
+                <a href="/news" class="btn btn-sm btn-primary float-end">Ver todas</a>
+            </h2>
+            <div class="row">
+                {% for new in news|slice(0, 4) %}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="{{ new.link }}" class="text-decoration-none" target="_blank">{{ new.title }}</a>
+                            </h5>
+                            <p class="card-text">{{ new.text }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+
+    <div class="col-md-4">
+        <!-- Clasificación Rápida -->
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0">Clasificación</h3>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-sm mb-0">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Equipo</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for team in team_stats|slice(0, 5) %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ team.name }}</td>
+                                <td><strong>{{ team.points }}</strong></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/statistics" class="btn btn-sm btn-success">Ver clasificación completa</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Noticias - Fastscore{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Últimas Noticias</h1>
+
+<div class="row">
+    {% for new in news %}
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="{{ new.link }}" class="text-decoration-none" target="_blank">{{ new.title }}</a>
+                </h5>
+                <p class="card-text">{{ new.text }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 

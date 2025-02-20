@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Partidos - Fastscore{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Partidos</h1>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Local</th>
+                        <th>Resultado</th>
+                        <th>Visitante</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for match in matches %}
+                    <tr>
+                        <td>{{ match.date }}</td>
+                        <td>{{ match.team_home }}</td>
+                        <td><span class="badge bg-primary">{{ match.score_home }} - {{ match.score_away }}</span></td>
+                        <td>{{ match.team_away }}</td>
+                        <td><i class="far fa-clock"></i> {{ match.match_time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %} 

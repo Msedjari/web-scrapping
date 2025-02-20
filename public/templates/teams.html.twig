@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Equipos - Fastscore{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Equipos</h1>
+
+<div class="row">
+    {% for team in teams %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                {% if team.logo_url %}
+                <img src="{{ team.logo_url }}" alt="Logo {{ team.club_name }}" 
+                     class="img-fluid mb-3" style="max-height: 100px;">
+                {% endif %}
+                <h5 class="card-title">{{ team.club_name }}</h5>
+                <ul class="list-unstyled text-start">
+                    <li><i class="fas fa-calendar"></i> Fundado en {{ team.foundation_year }}</li>
+                    <li><i class="fas fa-trophy"></i> Liga: {{ team.league }}</li>
+                    <li><i class="fas fa-user-tie"></i> Presidente: {{ team.president }}</li>
+                    <li><i class="fas fa-user"></i> Entrenador: {{ team.coach }}</li>
+                </ul>
+                <a href="{{ team.website }}" class="btn btn-primary btn-sm" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Visitar Web
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 
