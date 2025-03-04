@@ -5,6 +5,18 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8">
+        <!-- Bloque de introducción -->
+        <p>
+            <strong>
+            <span style="color:rgb(0, 140, 255);">FastScore</span> es una aplicación web diseñada para los amantes del fútbol, que ofrece 
+            resultados en directo, estadísticas detalladas y un historial de partidos anteriores de tus equipos y competiciones favoritas. 
+            Además, incluye noticias actualizadas sobre el mundo del fútbol y te permite personalizar tu experiencia 
+            seleccionando equipos favoritos, ligas y copas que deseas seguir de cerca. 
+            Con una interfaz intuitiva y accesible, <span  style="color:rgb(0, 140, 255);">FastScore</span> busca convertirse en tu mejor 
+            compañero para mantenerte al tanto de toda la acción futbolística en tiempo real.
+            </strong>
+        </p>
+
         <!-- Últimos Partidos -->
         <section class="mb-5">
             <h2 class="border-bottom pb-2 mb-4">
@@ -57,39 +69,6 @@
             </div>
         </section>
     </div>
-
-    <div class="col-md-4">
-        <!-- Clasificación Rápida -->
-        <div class="card mb-4">
-            <div class="card-header bg-success text-white">
-                <h3 class="h5 mb-0">Clasificación</h3>
-            </div>
-            <div class="card-body p-0">
-                <div class="table-responsive">
-                    <table class="table table-sm mb-0">
-                        <thead>
-                            <tr>
-                                <th>Pos</th>
-                                <th>Equipo</th>
-                                <th>Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for team in team_stats|slice(0, 5) %}
-                            <tr>
-                                <td>{{ loop.index }}</td>
-                                <td>{{ team.name }}</td>
-                                <td><strong>{{ team.points }}</strong></td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="/statistics" class="btn btn-sm btn-success">Ver clasificación completa</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 {% endblock %}

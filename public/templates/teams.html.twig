@@ -14,12 +14,15 @@
                 <img src="{{ team.logo_url }}" alt="Logo {{ team.club_name }}" 
                      class="img-fluid mb-3" style="max-height: 100px;">
                 {% endif %}
-                <h5 class="card-title">{{ team.club_name }}</h5>
+                <h5 class="card-title"><img src="{{ team.escudo_image }}" alt="Escudo {{ team.club_name }}" style="max-height: 50px;">{{ team.club_name }}</h5>
                 <ul class="list-unstyled text-start">
                     <li><i class="fas fa-calendar"></i> Fundado en {{ team.foundation_year }}</li>
                     <li><i class="fas fa-trophy"></i> Liga: {{ team.league }}</li>
                     <li><i class="fas fa-user-tie"></i> Presidente: {{ team.president }}</li>
                     <li><i class="fas fa-user"></i> Entrenador: {{ team.coach }}</li>
+                    <li><i class="fas fa-home"></i> Estadio: {{ team.stadium_name }}</li>
+                    <li><i class="fas fa-users"></i> Capacidad: {{ team.stadium_capacity }}</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Dirección: {{ team.stadium_address }}</li>
                 </ul>
                 <a href="{{ team.website }}" class="btn btn-primary btn-sm" target="_blank">
                     <i class="fas fa-external-link-alt"></i> Visitar Web

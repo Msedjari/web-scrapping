@@ -17,7 +17,13 @@ footer {
     padding: 0;
     box-sizing: border-box;
 }
-
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #bac0c7;
+    border-radius: 5px;
+}
 /* Estilos generales del body */
 body {
     line-height: 1.6;
@@ -41,7 +47,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #007bff;
+    color: #464b50;
 }
 
 /* Estilos para las tablas */
@@ -135,3 +141,45 @@ footer a {
     margin: 0 auto;
     padding: 0 15px;
 }
+.league-title {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.match-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team img {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.score {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.match-time {
+    font-size: 0.9em;
+    color: #666;
+}
+

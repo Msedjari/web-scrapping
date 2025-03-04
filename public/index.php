@@ -26,14 +26,15 @@ try {
             echo $twig->render('home.html.twig', [
                 'matches' => getLatestMatches(),
                 'news' => getLatestNews(),
-                'team_stats' => getTeamStats()
             ]);
             break;
 
         case '/matches':
-            // Página de partidos
+            
             echo $twig->render('matches.html.twig', [
-                'matches' => getAllMatches()
+                'matches' => getAllMatches(),
+                'team_logos' => getTeamLogo()
+                
             ]);
             break;
 
@@ -62,7 +63,7 @@ try {
         default:
             // Página 404
             header("HTTP/1.0 404 Not Found");
-            echo $twig->render('404.html.twig');
+            echo $twig->render('404.html');
             break;
     }
 
@@ -76,7 +77,10 @@ function getLatestMatches() {
 }
 
 function getAllMatches() {
-    // Implementar la lógica para obtener todos los partidos
+    global $conn;
+    $stmt = $conn->prepare("SELECT league_name, team_home, team_away, score_home, score_away, match_time FROM match_data ORDER BY league_name");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getLatestNews() {
@@ -84,11 +88,17 @@ function getLatestNews() {
 }
 
 function getAllNews() {
-    // Implementar la lógica para obtener todas las noticias
+    global $conn;
+    $stmt = $conn->prepare("SELECT title, text, content FROM news_data WHERE news_data.content IS NOT NULL ORDER BY LENGTH(content)");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getAllTeams() {
-    // Implementar la lógica para obtener todos los equipos
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM team_info where team_info.club_name is not null"); // Consulta para obtener información de equipos
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getTeamStats() {
@@ -97,5 +107,29 @@ function getTeamStats() {
 
 function getPlayerStats() {
     // Implementar la lógica para obtener las estadísticas de los jugadores
+}
+
+
+function getTeamLogo() {
+    global $conn;
+    $stmt = $conn->prepare("SELECT team_name, league_name, logo_path FROM team_logos");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getLeagueLogo($league_name) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT logo_path FROM league_logos WHERE league_name = :league_name");
+    $stmt->bindParam(':league_name', $league_name, PDO::PARAM_STR);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+// Función para obtener un artículo por ID
+function getArticleById($id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT title, text, content, date FROM news_data WHERE id = $id");
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 ?>

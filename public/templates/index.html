@@ -167,26 +167,26 @@
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead class="table-dark">
-                        <tr>
-                            <th>Local</th>
-                            <th>Visitante</th>
-                            <th>Resultado</th>
-                            <th>Hora</th>
-                        </tr>
+        <tr>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th>Resultado</th>
+            <th>Hora</th>
+        </tr>
                     </thead>
                     <tbody>
                         <!-- Loop para mostrar los partidos -->
-                        {% for match in matches %}
-                        <tr>
-                            <td>{{ match.team_home }}</td>
-                            <td>{{ match.team_away }}</td>
+        {% for match in matches %}
+        <tr>
+            <td>{{ match.team_home }}</td>
+            <td>{{ match.team_away }}</td>
                             <!-- Badge para resaltar el resultado -->
                             <td><span class="badge bg-primary">{{ match.score_home }} - {{ match.score_away }}</span></td>
                             <td><i class="far fa-clock"></i> {{ match.match_time }}</td>
-                        </tr>
-                        {% endfor %}
+        </tr>
+        {% endfor %}
                     </tbody>
-                </table>
+    </table>
             </div>
         </section>
 
@@ -196,7 +196,7 @@
             <!-- Grid de noticias -->
             <div class="row">
                 <!-- Loop para mostrar las noticias -->
-                {% for new in news %}
+        {% for new in news %}
                 <div class="col-md-6 mb-4">
                     <!-- Tarjeta de noticia -->
                     <div class="card h-100">
@@ -208,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+        {% endfor %}
             </div>
         </section>
 
@@ -218,7 +218,7 @@
             <!-- Grid de equipos -->
             <div class="row">
                 <!-- Loop para mostrar los equipos -->
-                {% for team in teams %}
+        {% for team in teams %}
                 <div class="col-md-4 mb-4">
                     <!-- Tarjeta de equipo -->
                     <div class="card h-100">
@@ -243,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+        {% endfor %}
             </div>
         </section>
     </div>

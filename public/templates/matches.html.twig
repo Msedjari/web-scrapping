@@ -3,34 +3,64 @@
 {% block title %}Partidos - Fastscore{% endblock %}
 
 {% block content %}
-<h1 class="mb-4">Partidos</h1>
+<h1 class="mb-4 text-center">Resultados de Partidos</h1>
 
-<div class="card">
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Local</th>
-                        <th>Resultado</th>
-                        <th>Visitante</th>
-                        <th>Hora</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for match in matches %}
-                    <tr>
-                        <td>{{ match.date }}</td>
-                        <td>{{ match.team_home }}</td>
-                        <td><span class="badge bg-primary">{{ match.score_home }} - {{ match.score_away }}</span></td>
-                        <td>{{ match.team_away }}</td>
-                        <td><i class="far fa-clock"></i> {{ match.match_time }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+
+
+<div class="container">
+    
+{% set current_league = '' %}
+
+    {% for match in matches %}
+
+        {% if match.league_name != current_league %}
+            {% set current_league = match.league_name %}
+        {% endif %}
+
+        {# Buscar los logos de los equipos #}
+        {% set home_logo = null %}
+        {% set away_logo = null %}
+
+        {% for logos in team_logos %}
+
+
+
+            {% if logos.team_name == match.team_home and logos.league_name == match.league_name %}
+                {% set home_logo = logos.logo_path|replace({'./': '/'}) %}
+                
+            {% endif %}
+
+
+            {% if logos.team_name == match.team_away and logos.league_name == match.league_name %}
+                {% set away_logo = logos.logo_path|replace({'./': '/'}) %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body text-center">
+                <div class="row align-items-center">
+                    <div class="col-4 text-end">
+                        <strong>{{ match.team_home }}</strong>
+
+                          <img src="assets/img/team_logos{{ home_logo }}" alt="Logo {{ match.team_home }}" class="img-fluid" style="max-height: 50px;">
+
+                    </div>
+                    <div class="col-4">
+                        <span class="badge bg-primary fs-4">{{ match.score_home }} - {{ match.score_away }}</span>
+                        <p class="text-muted mb-0">
+                            <i class="far fa-calendar-alt"></i> {{ match.match_time|date('Y-m-d') }} &nbsp; 
+                            <i class="far fa-clock"></i> {{ match.match_time|date('H:i') }}
+                        </p>
+                    </div>
+                    <div class="col-4 text-start">
+
+                            <img src="assets/img/team_logos{{ away_logo }}" alt="Logo {{ match.team_away }}" class="img-fluid" style="max-height: 50px;">
+
+                        <strong>{{ match.team_away }}</strong>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    {% endfor %}
 </div>
-{% endblock %} 
+{% endblock %}

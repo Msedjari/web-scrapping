@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artículo - Fastscore{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Últimas Noticias</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ path('article', {'id': article.id}) }}" class="text-decoration-none">{{ article.title }}</a>
+                    </h5>
+                    <strong><p class="card-text mb-0">{{ article.text }}</p></strong>
+                    <p class="card-text mb-0">{{ article.content }}</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <small>Publicado el {{ article.date|date('d/m/Y') }}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
