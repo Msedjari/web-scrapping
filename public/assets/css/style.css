@@ -21,9 +21,27 @@ footer {
     font-weight: bold;
     font-size: 1.5rem;
     color: #ffffff;
-    background-color: #bac0c7;
-    border-radius: 5px;
+    background-color: #536270; /* Un tono oscuro y elegante */
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
 }
+
+.navbar-brand i {
+    color: #000000; /* Color dorado para destacar el icono */
+    font-size: 1.8rem;
+}
+
+.navbar-brand:hover {
+    background-color: #34495e; /* Un tono más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
 /* Estilos generales del body */
 body {
     line-height: 1.6;
@@ -31,24 +49,36 @@ body {
     background-color: #fff;
 }
 
-/* Estilos de la barra de navegación */
+/* Estilos mejorados de la barra de navegación */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #2c3e50; /* Azul oscuro elegante */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+/* Estilos de los enlaces de navegación */
 .navbar a {
-    color: #333;
+    color: #ecf0f1; /* Texto claro */
+    font-size: 1.1rem;
+    font-weight: bold;
     text-decoration: none;
-    padding: 8px 15px;
-    transition: color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #464b50;
+    background-color: #34495e; /* Cambio de color en hover */
+    color: #f1c40f; /* Amarillo dorado para resaltar */
+    transform: scale(1.05);
 }
+
 
 /* Estilos para las tablas */
 table {
@@ -136,10 +166,18 @@ footer a {
 }
 
 /* Contenedor principal */
-.container {
+.container-form {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    background-color: #34495e;
+}
+.containerMatches{
+    margin-top: 20px;
+}
+.info{
+    background-color: #dadbdd;
+    border-radius: 15px;
 }
 .league-title {
     background-color: #333;
@@ -182,4 +220,21 @@ footer a {
     font-size: 0.9em;
     color: #666;
 }
+.card-body {
+    transition: transform 0.3s ease;
+  }
 
+  .card-body:hover {
+    transform: scale(1.05); /* Aumenta el tamaño en un 10% */
+  }
+  li.nav-item {
+    margin-right: 10px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: none;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    padding: 10px;
+}

@@ -20,4 +20,12 @@ EQUIPOS8 -> extrae los datos x2 desde los links extaridos
 
 Equipos9
 
+==========================================
+1-create page login.html.twig
 
+2-create page register.html.twig
+   -insertar los valores ingresados en la bbdd (name,email,password) 
+   
+3-Si los valores existen que haga una redireccion dashboard /si no error (login.php)
+4-Si los valores estan correctos que genere un token (login.php) 
+5-

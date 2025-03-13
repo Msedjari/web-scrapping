@@ -1,6 +1,14 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+use App\Models\User;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../src/render.php';
+require_once __DIR__ . '/../public/views/User.php';
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $twig = new \Twig\Environment($loader);
@@ -19,6 +27,28 @@ try {
     $request_uri = $_SERVER['REQUEST_URI'];
     $path = parse_url($request_uri, PHP_URL_PATH);
 
+    $error = null;
+
+    // Manejo de formulario de registro
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && $path == '/register') {
+        $user = new User();
+        
+        $username = $_POST['username'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $password = $_POST['password'] ?? '';
+
+        if (!empty($username) && !empty($email) && !empty($password)) {
+            if ($user->register($username, $email, $password)) {
+                header("Location: /login?success=1");
+                exit();
+            } else {
+                $error = "Error al registrar el usuario.";
+            }
+        } else {
+            $error = "Todos los campos son obligatorios.";
+        }
+    }
+
     // Enrutamiento
     switch ($path) {
         case '/':
@@ -26,6 +56,9 @@ try {
             echo $twig->render('home.html.twig', [
                 'matches' => getLatestMatches(),
                 'news' => getLatestNews(),
+                'team_logos' => getTeamLogo(),
+                'teams_count' => getTeamsCountByLeague(),
+                
             ]);
             break;
 
@@ -52,12 +85,21 @@ try {
             ]);
             break;
 
-        case '/statistics':
+        case '/User':
             // Página de estadísticas
             echo $twig->render('statistics.html.twig', [
                 'players' => getPlayerStats(),
                 'team_stats' => getTeamStats()
             ]);
+            break;
+        case '/login':
+            // Página de inicio de sesión
+            echo $twig->render('login.html.twig');
+            break;
+        case '/register':
+            // Página de registro
+            echo $twig->render('register.html.twig');
+
             break;
 
         default:
@@ -73,7 +115,11 @@ try {
 
 // Funciones auxiliares para obtener datos (deberás implementarlas según tu base de datos)
 function getLatestMatches() {
-    // Implementar la lógica para obtener los últimos partidos
+    //la lógica para obtener los últimos partidos
+    global $conn;
+    $stmt = $conn->prepare("SELECT league_name, team_home, team_away, score_home, score_away, match_time FROM match_data ORDER BY match_time DESC LIMIT 3");                                       
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getAllMatches() {
@@ -84,7 +130,10 @@ function getAllMatches() {
 }
 
 function getLatestNews() {
-    // Implementar la lógica para obtener las últimas noticias
+    global $conn;
+    $stmt = $conn->prepare("SELECT title, text FROM news_data WHERE news_data.content IS NOT NULL ORDER BY LENGTH(content) Desc LIMIT 3"); // Cambiamos LIMIT 5 por LIMIT 3
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getAllNews() {
@@ -101,13 +150,6 @@ function getAllTeams() {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function getTeamStats() {
-    // Implementar la lógica para obtener las estadísticas de los equipos
-}
-
-function getPlayerStats() {
-    // Implementar la lógica para obtener las estadísticas de los jugadores
-}
 
 
 function getTeamLogo() {
@@ -131,5 +173,12 @@ function getArticleById($id) {
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+function getTeamsCountByLeague() {
+    global $conn;
+    $stmt = $conn->prepare("SELECT league_name, COUNT(*) as team_count FROM team_logos WHERE team_name IS NOT NULL GROUP BY league_name");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 }
 ?>
