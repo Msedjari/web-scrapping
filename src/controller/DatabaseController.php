@@ -18,7 +18,11 @@ class DatabaseController {
     );
 
     private static $instance = null;    
-    private function __construct() {}
+
+    private $connection = null; 
+    private function __construct() {
+         $this->connection = $this->connect();
+    }
 
     public static function getInstance() {
         if (self::$instance == null) {
@@ -30,10 +34,18 @@ class DatabaseController {
     public function connect() {
         try {
             $this->conn = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname, self::$username, self::$password, self::$options);
+            return $this->conn;
         } catch (PDOException $e) {
             die("Error de conexión: " . $e->getMessage());
         }
     }
+
+      // Obtiene la conexión actual.
+      public function getConnection() {
+        return $this->conn; // Retorna la conexión a la base de datos.
+    }
+
+
 
     public function getMatches($limit = 10) {
         $stmt = $this->conn->prepare("SELECT * FROM match_data ORDER BY id DESC LIMIT :limit");

@@ -12,6 +12,7 @@ require_once __DIR__ . '/../public/views/User.php';
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $twig = new \Twig\Environment($loader);
+$viewDir = '/views/';
 
 // Configuración de la base de datos
 $servername = "localhost";
@@ -29,26 +30,7 @@ try {
 
     $error = null;
 
-    // Manejo de formulario de registro
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && $path == '/register') {
-        $user = new User();
-        
-        $username = $_POST['username'] ?? '';
-        $email = $_POST['email'] ?? '';
-        $password = $_POST['password'] ?? '';
-
-        if (!empty($username) && !empty($email) && !empty($password)) {
-            if ($user->register($username, $email, $password)) {
-                header("Location: /login?success=1");
-                exit();
-            } else {
-                $error = "Error al registrar el usuario.";
-            }
-        } else {
-            $error = "Todos los campos son obligatorios.";
-        }
-    }
-
+    
     // Enrutamiento
     switch ($path) {
         case '/':
@@ -84,23 +66,15 @@ try {
                 'teams' => getAllTeams()
             ]);
             break;
-
-        case '/User':
-            // Página de estadísticas
-            echo $twig->render('statistics.html.twig', [
-                'players' => getPlayerStats(),
-                'team_stats' => getTeamStats()
-            ]);
-            break;
+            
         case '/login':
             // Página de inicio de sesión
             echo $twig->render('login.html.twig');
             break;
-        case '/register':
-            // Página de registro
-            echo $twig->render('register.html.twig');
-
-            break;
+            case '/register':
+                require __DIR__ . $viewDir . 'register.php';
+                    break;
+                
 
         default:
             // Página 404

@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- Vincular CSS de Bootstrap desde la carpeta bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h2>Iniciar Sesión</h2>
-    {% if error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
-    <form method="post" action="login.php">
-        <input type="text" name="username" placeholder="Usuario" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
-        <button type="submit">Ingresar</button>
-    </form>
+    <div class="container mt-5">
+    <div class="d-flex justify-content-between">
+            <a href="?lang=es" class="btn btn-primary">Español</a>
+            <a href="?lang=en" class="btn btn-primary">Inglés</a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                {% if session.error %}
+                <div class="alert alert-danger text-center" role="alert">
+                    {{ session.error }}
+                </div>
+                {% endif %}
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Iniciar sesión</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Formulario de login -->
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="username">Usuario</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="password">Contraseña</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+                            <div class="form-group mt-3 form-check">
+                                <input type="checkbox" id="remember_me" name="remember_me" class="form-check-input">
+                                <label class="form-check-label" for="remember_me">"Recordarme</label>
+                            </div>
+                            <div class="form-group mt-4 d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                            </div>
+                        </form>
+                        <div class="form-group mt-3 text-center">
+                            <a href="forgot_password">¿Has olvidado tu contraseña?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vincular JS de Bootstrap desde la carpeta bootstrap -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
