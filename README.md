@@ -3,7 +3,7 @@
 ## **Descripción del Proyecto**
 El proyecto **Web Scrapping** es una herramienta robusta y versátil para la extracción de datos de sitios web. Desarrollado principalmente en Python, integra diversas tecnologías para configurar, ejecutar y gestionar scripts de scraping de forma eficiente. Su objetivo es facilitar la recolección, procesamiento y almacenamiento de información web, ofreciendo una solución escalable para análisis de datos y minería de información.
 
-FastScore es una aplicación web diseñada para los amantes del fútbol, que ofrece resultados en directo, estadísticas detalladas y un historial de partidos anteriores de tus equipos y competiciones favoritas. Además, incluye noticias actualizadas sobre el mundo del fútbol y te permite personalizar tu experiencia seleccionando equipos favoritos, ligas y copas que deseas seguir de cerca. Con una interfaz intuitiva y accesible, FastScore busca convertirse en tu mejor compañero para mantenerte al tanto de toda la acción futbolística en tiempo real.
+**FastScore** es una aplicación web diseñada para los amantes del fútbol, que ofrece resultados en directo, estadísticas detalladas y un historial de partidos anteriores de tus equipos y competiciones favoritas. Además, incluye noticias actualizadas sobre el mundo del fútbol y te permite personalizar tu experiencia seleccionando equipos favoritos, ligas y copas que deseas seguir de cerca. Con una interfaz intuitiva y accesible, **FastScore** busca convertirse en tu mejor compañero para mantenerte al tanto de toda la acción futbolística en tiempo real.
 
 ## **Características**
 - **Extracción de Datos:** Captura información de diversas fuentes web, adaptándose a distintos formatos y estructuras HTML.
