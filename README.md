@@ -22,5 +22,4 @@ La siguiente estructura de carpetas facilita la mantenibilidad del código y la 
 ## **Requisitos**
 - **Python:** Versión 3 o superior.
 - **Composer:** Para la gestión de dependencias PHP.
-- **Dependencias Python:** Se recomienda utilizar un entorno virtual.
 
