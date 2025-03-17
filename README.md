@@ -16,7 +16,33 @@ El proyecto **Web Scrapping** es una herramienta robusta y versátil para la ext
 La siguiente estructura de carpetas facilita la mantenibilidad del código y la escalabilidad del proyecto:
 
 
-📁 web-scrapping/ ├── 📁 config/ # Archivos de configuración del proyecto. ├── 📁 public/ # Recursos públicos (HTML, CSS, JavaScript, imágenes, etc.). ├── 📁 scripts/ # Scripts de automatización y tareas auxiliares. ├── 📁 src/ # Código fuente principal (módulos, librerías y lógica de scraping en Python). ├── 📄 .env # Archivo de variables de entorno (configuración sensible). ├── 📄 .gitignore # Archivos y directorios ignorados por Git. ├── 📄 README.md # Documentación y guía del proyecto. ├── 📄 composer.json # Gestión de dependencias para componentes PHP. └── 📄 composer.lock # Registro exacto de versiones de dependencias PHP.
+├── config
+├── public
+│   ├── assets
+│   │   ├── css
+│   │   └── img
+│   │       └── team_logos
+│   │           ├── bundesliga
+│   │           ├── champions-league
+│   │           ├── laliga
+│   │           ├── premier-league
+│   │           └── serie-a
+│   ├── templates
+│   └── views
+├── scripts
+│   ├── equipos
+│   ├── Noticias
+│   └── Resultados
+│       └── match_links
+│           └── Links
+├── src
+│   ├── controller
+│   └── db
+└── translations
+    ├── en_US
+    │   └──  LC_MESSAGES
+    └── es_ES
+        └── LC_MESSAGES
 
 
 ## **Requisitos**
