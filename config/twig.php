@@ -3,10 +3,10 @@
 session_start();
 
 // Cargamos Composer autoload
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 // Configuración de Twig
-$loader = new \Twig\Loader\FilesystemLoader('../templates');
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../public/templates');
 $twig = new \Twig\Environment($loader, [
     'cache' => false, // Desactivar caché en desarrollo (en producción usa una ruta de caché)
     'autoescape' => 'html', // Escapar automáticamente para seguridad (recomendado)

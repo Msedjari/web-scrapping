@@ -33,8 +33,8 @@ class DatabaseController {
 
     public function connect() {
         try {
-            $this->conn = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname, self::$username, self::$password, self::$options);
-            return $this->conn;
+            $this->connection = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname, self::$username, self::$password, self::$options);
+            return $this->connection;
         } catch (PDOException $e) {
             die("Error de conexión: " . $e->getMessage());
         }
@@ -42,7 +42,7 @@ class DatabaseController {
 
       // Obtiene la conexión actual.
       public function getConnection() {
-        return $this->conn; // Retorna la conexión a la base de datos.
+        return $this->connection; // Retorna la conexión a la base de datos.
     }
 
 
@@ -104,5 +104,17 @@ class DatabaseController {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function editTeam($teamId, $teamName) {
+        $stmt = $this->conn->prepare("UPDATE team_info SET name = :name WHERE id = :id");
+        $stmt->bindParam(':name', $teamName, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $teamId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    public function deleteTeam($teamId) {
+        $stmt = $this->conn->prepare("DELETE FROM team_info WHERE id = :id");
+        $stmt->bindParam(':id', $teamId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
 }
 ?>

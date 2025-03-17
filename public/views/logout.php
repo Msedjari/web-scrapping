@@ -1,7 +1,5 @@
 <?php
-require '../config.php';
-require '../src/controller/AuthController.php';
-
-$auth = new AuthController($twig, $pdo);
-$auth->logout();
-?>
+  SessionController::userLogout();
+// Redirigir a la página de inicio de sesión después de procesar el formulario
+header("Location: /login");
+exit;

@@ -1,0 +1,21 @@
+msgid "Panel de Administración"
+msgstr "Admin Panel"
+
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Equipos"
+msgstr "Teams"
+
+msgid "Partidos"
+msgstr "Matches"
+
+msgid "Noticias"
+msgstr "News"
+
+msgid "Registrar"
+msgstr "Register"
+
+msgid "Login"
+msgstr "Iniciar sesion"
+
