@@ -15,7 +15,7 @@ El proyecto **Web Scrapping** es una herramienta robusta y versátil para la ext
 ## **Estructura del Repositorio**
 La siguiente estructura de carpetas facilita la mantenibilidad del código y la escalabilidad del proyecto:
 
-
+```
 ├── config
 ├── public
 │   ├── assets
@@ -43,7 +43,7 @@ La siguiente estructura de carpetas facilita la mantenibilidad del código y la 
     │   └──  LC_MESSAGES
     └── es_ES
         └── LC_MESSAGES
-
+```
 
 ## **Requisitos**
 - **Python:** Versión 3 o superior.
