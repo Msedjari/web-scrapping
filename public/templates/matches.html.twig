@@ -2,19 +2,201 @@
 
 {% block title %}Partidos - Fastscore{% endblock %}
 
-{% block content %}
-<h1 class="mb-4 text-center"><i class="fa-solid fa-square-poll-vertical"></i>Resultados de Partidos</h1>
-
-
-
-<div class="container">
+{% block stylesheets %}
+<style>
+    .date-separator {
+        margin: 2rem 0;
+        position: relative;
+    }
     
-{% set current_league = '' %}
+    .date-separator .badge {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        box-shadow: var(--shadow);
+    }
+    
+    .league-header {
+        margin: 1.5rem 0;
+        border-radius: var(--border-radius);
+        padding: 0.75rem 1rem;
+        background-color: rgba(0, 0, 0, 0.03);
+    }
+    
+    .league-header h4 {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .match-card {
+        display: flex;
+        background-color: var(--card-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        margin-bottom: 1rem;
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        transition: var(--transition);
+        border-left: 3px solid var(--primary-color);
+    }
+    
+    .match-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+    }
+    
+    .team.text-end {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .team.text-start {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .team img {
+        max-width: 50px;
+        max-height: 50px;
+        margin: 0.5rem;
+    }
+    
+    .score-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .score {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .match-time {
+        font-size: 0.8rem;
+        color: #666;
+        margin-top: 0.75rem;
+    }
+    
+    .team strong {
+        font-size: 1rem;
+        max-width: 150px;
+        text-align: center;
+    }
+    
+    .hr-light {
+        opacity: 0.15;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 767px) {
+        .team img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+        
+        .team strong {
+            font-size: 0.9rem;
+            max-width: 100px;
+        }
+        
+        .score {
+            font-size: 1.2rem;
+        }
+    }
+    
+    /* Filter section */
+    .filter-section {
+        background-color: var(--card-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .numero{
+        color: white;
+    }
+</style>
+{% endblock %}
 
+{% block content %}
+<div class="text-center mb-4">
+    <h1 class="section-title d-inline-flex">
+        <i class="fa-solid fa-square-poll-vertical me-2"></i> Resultados de Partidos
+    </h1>
+</div>
+
+<!-- Filter Section -->
+<div class="filter-section">
+    <div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+            <label class="form-label"><i class="fas fa-filter me-2"></i>Filtrar por liga:</label>
+            <select class="form-select" id="leagueFilter">
+                <option value="all">Todas las ligas</option>
+                {% set leagues = [] %}
+                {% for match in matches %}
+                    {% if match.league_name not in leagues %}
+                        {% set leagues = leagues|merge([match.league_name]) %}
+                        <option value="{{ match.league_name }}">{{ match.league_name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+            <label class="form-label"><i class="fas fa-calendar-alt me-2"></i>Filtrar por fecha:</label>
+            <select class="form-select" id="dateFilter">
+                <option value="all">Todas las fechas</option>
+                {% set dates = [] %}
+                {% for match in matches %}
+                    {% set match_date = match.match_time|date('Y-m-d') %}
+                    {% if match_date not in dates %}
+                        {% set dates = dates|merge([match_date]) %}
+                        <option value="{{ match_date }}">{{ match_date|date('d/m/Y') }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label"><i class="fas fa-search me-2"></i>Buscar equipo:</label>
+            <input type="text" class="form-control" id="teamSearch" placeholder="Nombre del equipo...">
+        </div>
+    </div>
+</div>
+
+<div id="matchesContainer">
+    {% set current_league = '' %}
+    {% set current_date = '' %}
+    
     {% for match in matches %}
-
+        {% set match_date = match.match_time|date('Y-m-d') %}
+        
+        {% if match_date != current_date %}
+            {% set current_date = match_date %}
+            <div class="date-separator" data-date="{{ match_date }}">
+                <h3 class="text-center">
+                    <span class="badge numero bg-primary">
+                        <i class="far fa-calendar-alt me-2"></i>{{ match_date|date('d/m/Y') }}
+                    </span>
+                </h3>
+            </div>
+        {% endif %}
+    
         {% if match.league_name != current_league %}
             {% set current_league = match.league_name %}
+            <div class="league-header" data-league="{{ match.league_name }}">
+                <h4 class="text-primary fw-bold">
+                    <i class="fas fa-trophy me-2"></i>{{ current_league }}
+                </h4>
+            </div>
         {% endif %}
 
         {# Buscar los logos de los equipos #}
@@ -22,45 +204,123 @@
         {% set away_logo = null %}
 
         {% for logos in team_logos %}
-
-
-
             {% if logos.team_name == match.team_home and logos.league_name == match.league_name %}
                 {% set home_logo = logos.logo_path|replace({'./': '/'}) %}
-                
             {% endif %}
-
 
             {% if logos.team_name == match.team_away and logos.league_name == match.league_name %}
                 {% set away_logo = logos.logo_path|replace({'./': '/'}) %}
             {% endif %}
         {% endfor %}
 
-        <div class="card mb-3 shadow-sm">
-            <div class="card-body text-center">
-                <div class="row align-items-center">
-                    <div class="col-4 text-end">
-                        <strong>{{ match.team_home }}</strong>
-
-                          <img src="assets/img/team_logos{{ home_logo }}" alt="Logo {{ match.team_home }}" class="img-fluid" style="max-height: 50px;">
-
-                    </div>
-                    <div class="col-4">
-                        <span class="badge bg-primary fs-4">{{ match.score_home }} - {{ match.score_away }}</span>
-                        <p class="text-muted mb-0">
-                            <i class="far fa-calendar-alt"></i> {{ match.match_time|date('Y-m-d') }} &nbsp; 
-                            <i class="far fa-clock"></i> {{ match.match_time|date('H:i') }}
-                        </p>
-                    </div>
-                    <div class="col-4 text-start">
-
-                            <img src="assets/img/team_logos{{ away_logo }}" alt="Logo {{ match.team_away }}" class="img-fluid" style="max-height: 50px;">
-
-                        <strong>{{ match.team_away }}</strong>
-                    </div>
-                </div>
+        <div class="match-card" 
+             data-league="{{ match.league_name }}" 
+             data-date="{{ match_date }}"
+             data-home="{{ match.team_home }}"
+             data-away="{{ match.team_away }}">
+            <div class="team text-end">
+                <strong>{{ match.team_home }}</strong>
+                <img src="assets/img/team_logos{{ home_logo }}" alt="Logo {{ match.team_home }}" class="img-fluid">
+            </div>
+            
+            <div class="score-container">
+                <span class="badge numero bg-primary score">{{ match.score_home }} - {{ match.score_away }}</span>
+                <p class="match-time">
+                    <i class="far fa-clock me-1"></i>{{ match.match_time|date('H:i') }}
+                </p>
+            </div>
+            
+            <div class="team text-start">
+                <img src="assets/img/team_logos{{ away_logo }}" alt="Logo {{ match.team_away }}" class="img-fluid">
+                <strong>{{ match.team_away }}</strong>
             </div>
         </div>
     {% endfor %}
 </div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const leagueFilter = document.getElementById('leagueFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const teamSearch = document.getElementById('teamSearch');
+        const matchesContainer = document.getElementById('matchesContainer');
+        
+        function filterMatches() {
+            const selectedLeague = leagueFilter.value;
+            const selectedDate = dateFilter.value;
+            const searchTerm = teamSearch.value.toLowerCase();
+            
+            const matches = document.querySelectorAll('.match-card');
+            const leagueHeaders = document.querySelectorAll('.league-header');
+            const dateSeparators = document.querySelectorAll('.date-separator');
+            
+            // Hide all headers first
+            leagueHeaders.forEach(header => header.style.display = 'none');
+            dateSeparators.forEach(separator => separator.style.display = 'none');
+            
+            let visibleLeagues = new Set();
+            let visibleDates = new Set();
+            
+            // Filter matches
+            matches.forEach(match => {
+                const matchLeague = match.getAttribute('data-league');
+                const matchDate = match.getAttribute('data-date');
+                const homeTeam = match.getAttribute('data-home').toLowerCase();
+                const awayTeam = match.getAttribute('data-away').toLowerCase();
+                
+                const leagueMatch = selectedLeague === 'all' || matchLeague === selectedLeague;
+                const dateMatch = selectedDate === 'all' || matchDate === selectedDate;
+                const teamMatch = searchTerm === '' || 
+                                  homeTeam.includes(searchTerm) || 
+                                  awayTeam.includes(searchTerm);
+                
+                if (leagueMatch && dateMatch && teamMatch) {
+                    match.style.display = '';
+                    visibleLeagues.add(matchLeague);
+                    visibleDates.add(matchDate);
+                } else {
+                    match.style.display = 'none';
+                }
+            });
+            
+            // Show relevant headers
+            leagueHeaders.forEach(header => {
+                const headerLeague = header.getAttribute('data-league');
+                if (visibleLeagues.has(headerLeague)) {
+                    header.style.display = '';
+                }
+            });
+            
+            dateSeparators.forEach(separator => {
+                const separatorDate = separator.getAttribute('data-date');
+                if (visibleDates.has(separatorDate)) {
+                    separator.style.display = '';
+                }
+            });
+            
+            // Show message if no matches
+            let noMatchesMessage = document.getElementById('noMatchesMessage');
+            const anyVisibleMatches = document.querySelectorAll('.match-card[style=""]').length > 0;
+            
+            if (!anyVisibleMatches) {
+                if (!noMatchesMessage) {
+                    noMatchesMessage = document.createElement('div');
+                    noMatchesMessage.id = 'noMatchesMessage';
+                    noMatchesMessage.className = 'alert alert-info text-center my-4';
+                    noMatchesMessage.innerHTML = '<i class="fas fa-info-circle me-2"></i>No se encontraron partidos con los filtros seleccionados.';
+                    matchesContainer.appendChild(noMatchesMessage);
+                }
+            } else if (noMatchesMessage) {
+                noMatchesMessage.remove();
+            }
+        }
+        
+        // Event listeners
+        leagueFilter.addEventListener('change', filterMatches);
+        dateFilter.addEventListener('change', filterMatches);
+        teamSearch.addEventListener('input', filterMatches);
+    });
+</script>
 {% endblock %}

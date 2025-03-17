@@ -4,119 +4,114 @@
 
 {% block content %}
 <div class="row">
-    <div class="info col-lg-12">
-        <!-- Bloque de introducción -->
-        <p>
-            <strong>
-            <span style="color:rgb(0, 140, 255);">FastScore</span> es una aplicación web diseñada para los amantes del fútbol, que ofrece 
-            resultados en directo, estadísticas detalladas y un historial de partidos anteriores de tus equipos y competiciones favoritas. 
-            Además, incluye noticias actualizadas sobre el mundo del fútbol y te permite personalizar tu experiencia 
-            seleccionando equipos favoritos, ligas y copas que deseas seguir de cerca. 
-            Con una interfaz intuitiva y accesible, <span  style="color:rgb(0, 140, 255);">FastScore</span> busca convertirse en tu mejor 
-            compañero para mantenerte al tanto de toda la acción futbolística en tiempo real.
-            </strong>
-        </p>
-        <!-- Últimas Noticias -->
-    </div>
-    </div>
-     <!-- Últimos Partidos -->
-        <div class="containerMatches">
-        <section class="mb-5">
-            <h2 class="border-bottom pb-2 mb-4">
-                <i class="fas fa-trophy"></i> Comparativa de Ligas
-            </h2>
-             <canvas id="leagueChart"></canvas>
-              <div class="btn-group mb-4">
-        <button id="showAll" class="btn btn-sm btn-primary">Todas</button>
-        {% for league in teams_count %}
-            <button class="btn btn-sm btn-secondary show-league" data-league="{{ league.league_name }}">
-                {{ league.league_name | title }}
-            </button>
-        {% endfor %}
-    </div>
-            <h2 class="border-bottom pb-2 mb-4">
-                <i class="fas fa-futbol"></i> Últimos Partidos
-                <a href="/matches" class="btn btn-sm btn-primary float-end">Ver todos</a>
-            </h2>
-           {% set current_league = '' %}
-
-    {% for match in matches %}
-
-        {% if match.league_name != current_league %}
-            {% set current_league = match.league_name %}
-        {% endif %}
-
-        {# Buscar los logos de los equipos #}
-        {% set home_logo = null %}
-        {% set away_logo = null %}
-
-        {% for logos in team_logos %}
-
-
-
-            {% if logos.team_name == match.team_home and logos.league_name == match.league_name %}
-                {% set home_logo = logos.logo_path|replace({'./': '/'}) %}
-                
-            {% endif %}
-
-
-            {% if logos.team_name == match.team_away and logos.league_name == match.league_name %}
-                {% set away_logo = logos.logo_path|replace({'./': '/'}) %}
-            {% endif %}
-        {% endfor %}
-
-        <div class="card mb-3 shadow-sm">
-            <div class="card-body text-center">
-                <div class="row align-items-center">
-                    <div class="col-4 text-end">
-                        <strong>{{ match.team_home }}</strong>
-
-                          <img src="assets/img/team_logos{{ home_logo }}" alt="Logo {{ match.team_home }}" class="img-fluid" style="max-height: 50px;">
-
-                    </div>
-                    <div class="col-4">
-                        <span class="badge bg-primary fs-4">{{ match.score_home }} - {{ match.score_away }}</span>
-                        <p class="text-muted mb-0">
-                            <i class="far fa-calendar-alt"></i> {{ match.match_time|date('Y-m-d') }} &nbsp; 
-                            <i class="far fa-clock"></i> {{ match.match_time|date('H:i') }}
-                        </p>
-                    </div>
-                    <div class="col-4 text-start">
-
-                            <img src="assets/img/team_logos{{ away_logo }}" alt="Logo {{ match.team_away }}" class="img-fluid" style="max-height: 50px;">
-
-                        <strong>{{ match.team_away }}</strong>
-                    </div>
-                </div>
-            </div>
+    <div class="col-lg-12">
+        <div class="info mb-4">
+            <h2 class="mb-3"><i class="fas fa-info-circle"></i> Bienvenido a FastScore</h2>
+            <p>
+                <strong>
+                <span class="text-primary">FastScore</span> es una aplicación web diseñada para los amantes del fútbol, que ofrece 
+                resultados en directo, estadísticas detalladas y un historial de partidos anteriores de tus equipos y competiciones favoritas. 
+                Además, incluye noticias actualizadas sobre el mundo del fútbol y te permite personalizar tu experiencia 
+                seleccionando equipos favoritos, ligas y copas que deseas seguir de cerca. 
+                Con una interfaz intuitiva y accesible, <span class="text-primary">FastScore</span> busca convertirse en tu mejor 
+                compañero para mantenerte al tanto de toda la acción futbolística en tiempo real.
+                </strong>
+            </p>
         </div>
-    {% endfor %}
     </div>
-        </section>
-        <section class="mb-5">
-            <h2 class="border-bottom pb-2 mb-4">
-                <i class="far fa-newspaper"></i> Últimas Noticias
-                <a href="/news" class="btn btn-sm btn-primary float-end">Ver todas</a>
-            </h2>
-             <div class="row">
-        {% for new in news %}
-        <div class="col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="{{ new.link }}" class="text-decoration-none" target="_blank">{{ new.title }}</a>
-                    </h5>
-                    <strong><p class="card-text mb-0">{{ new.text }}</p></strong>
-                    <p class="card-text mb-0">{{ new.content }}</p>
-                    <p class="card-text mb-0"><small class="text-muted">{{ new.date }}</small></p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-        </div>
-        </section>
-        </div>
 </div>
+
+<div class="containerMatches">
+    <section class="mb-5">
+        <h2 class="section-title">
+            <i class="fas fa-chart-bar"></i> Comparativa de Ligas
+        </h2>
+        
+        <div class="chart-container">
+            <canvas id="leagueChart"></canvas>
+            
+            <div class="btn-group mt-3">
+                <button id="showAll" class="btn btn-primary">Todas</button>
+                {% for league in teams_count %}
+                    <button class="btn btn-secondary show-league" data-league="{{ league.league_name }}">
+                        {{ league.league_name | title }}
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <h2 class="section-title">
+            <i class="fas fa-futbol"></i> Últimos Partidos
+            <a href="/matches" class="btn btn-primary ms-auto">Ver todos</a>
+        </h2>
+
+        {% set current_league = '' %}
+        {% for match in matches %}
+            {% if match.league_name != current_league %}
+                {% set current_league = match.league_name %}
+            {% endif %}
+
+            {# Buscar los logos de los equipos #}
+            {% set home_logo = null %}
+            {% set away_logo = null %}
+
+            {% for logos in team_logos %}
+                {% if logos.team_name == match.team_home and logos.league_name == match.league_name %}
+                    {% set home_logo = logos.logo_path|replace({'./': '/'}) %}
+                {% endif %}
+
+                {% if logos.team_name == match.team_away and logos.league_name == match.league_name %}
+                    {% set away_logo = logos.logo_path|replace({'./': '/'}) %}
+                {% endif %}
+            {% endfor %}
+
+            <div class="match-card">
+                <div class="team text-end">
+                    <strong>{{ match.team_home }}</strong>
+                    <img src="assets/img/team_logos{{ home_logo }}" alt="Logo {{ match.team_home }}" class="img-fluid">
+                </div>
+                
+                <div class="score-container">
+                    <span class="badge  numero bg-primary score ">{{ match.score_home }} - {{ match.score_away }}</span>
+                    <p class="match-time">
+                        <i class="far fa-calendar-alt"></i> {{ match.match_time|date('d/m/Y') }} <br>
+                        <i class="far fa-clock"></i> {{ match.match_time|date('H:i') }}
+                    </p>
+                </div>
+                
+                <div class="team text-start">
+                    <img src="assets/img/team_logos{{ away_logo }}" alt="Logo {{ match.team_away }}" class="img-fluid">
+                    <strong>{{ match.team_away }}</strong>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    
+    <section class="mb-5">
+        <h2 class="section-title">
+            <i class="far fa-newspaper"></i> Últimas Noticias
+            <a href="/news" class="btn btn-primary ms-auto">Ver todas</a>
+        </h2>
+        
+        <div class="row">
+            {% for new in news %}
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{{ new.link }}" class="text-decoration-none" target="_blank">{{ new.title }}</a>
+                        </h5>
+                        <p class="card-text fw-bold mb-2">{{ new.text }}</p>
+                        <p class="card-text mb-3">{{ new.content }}</p>
+                        <p class="card-text text-muted"><small><i class="far fa-clock me-1"></i>{{ new.date }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -128,19 +123,19 @@
 
         // Colores para las ligas
         const colors = [
-            'rgba(255, 99, 132, 0.2)',  
-            'rgba(54, 162, 235, 0.2)',  
-            'rgba(255, 206, 86, 0.2)',  
-            'rgba(75, 192, 192, 0.2)',  
-            'rgba(153, 102, 255, 0.2)'
+            'rgba(30, 136, 229, 0.7)',  
+            'rgba(38, 166, 154, 0.7)',  
+            'rgba(255, 152, 0, 0.7)',  
+            'rgba(233, 30, 99, 0.7)',  
+            'rgba(156, 39, 176, 0.7)'
         ];
 
         const borderColors = [
-            'rgb(255, 99, 132)',  
-            'rgb(54, 162, 235)',  
-            'rgb(255, 206, 86)',  
-            'rgb(75, 192, 192)',  
-            'rgb(153, 102, 255)'
+            'rgb(25, 118, 210)',  
+            'rgb(0, 137, 123)',  
+            'rgb(245, 124, 0)',  
+            'rgb(216, 27, 96)',  
+            'rgb(123, 31, 162)'
         ];
 
         let chart;
@@ -159,12 +154,44 @@
                         data: data.values,
                         backgroundColor: colors,
                         borderColor: borderColors,
-                        borderWidth: 2
+                        borderWidth: 2,
+                        borderRadius: 8,
+                        borderSkipped: false,
                     }]
                 },
                 options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            padding: 12,
+                            cornerRadius: 8,
+                            titleFont: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        }
+                    },
                     scales: {
-                        y: { beginAtZero: true }
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                display: true,
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeOutQuart'
                     }
                 }
             });

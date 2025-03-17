@@ -1,90 +1,155 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ "Administrar Equipos" }}</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Vincular CSS de Bootstrap 5 desde CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Estilos para pantallas con un ancho máximo de 768px */
-        @media (max-width: 768px) {
-            .table td, .table th {
-                padding: 10px;
-            }
-        }
+{% extends 'base.html.twig' %}
 
-        /* Estilos para pantallas con un ancho máximo de 576px */
-        @media (max-width: 576px) {
-            .card {
-                padding: 15px;
-            }
-            .form-label {
-                font-size: 14px;
-            }
-            .btn {
-                width: 100%;
-                margin-top: 10px;
-            }
-        }
+{% block title %}Administrar Equipos - Fastscore{% endblock %}
 
-        /* Estilo para hacer la tabla responsive */
-        .table-responsive {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        /* Estilo para el cuerpo de la tarjeta */
-        .card-body {
-            padding: 2rem;
-        }
-
-        /* Estilo para los controles de formulario */
-        .form-control {
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body class="container mt-5">
-    <!-- Botones para cambiar el idioma -->
-    <div class="d-flex justify-content-between">
-        <a href="?lang=es" class="btn btn-primary">Español</a>
-        <a href="?lang=en" class="btn btn-primary">English</a>
-    </div>
-
-    <!-- Título principal de la página -->
-    <h1 class="mb-4 text-center">Panel de Administración</h1>
+{% block stylesheets %}
+<style>
+    .team-form {
+        background-color: var(--card-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
     
-    <!-- Navegación con enlaces para registrarse o cerrar sesión -->
-    <nav class="mb-3">
-        <a href="register" class="btn btn-secondary">Registrarse</a>
-        <a href="/logout" class="btn btn-danger">Cerrar sesión</a>
-        <a href="/adminDashboard" class="btn btn-primary">Volver al Dashboard</a>
-    </nav>
+    .team-form .card-header {
+        background-color: transparent;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 1rem;
+    }
+    
+    .admin-table {
+        background-color: var(--card-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 1.5rem;
+    }
+    
+    .admin-table h2 {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .search-box {
+        background-color: rgba(0,0,0,0.03);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+</style>
+{% endblock %}
 
-    <!-- Mostrar mensaje de éxito si existe -->
-    {% if mensaje %}
-        <div class="alert alert-success">{{ mensaje }}</div>
-    {% endif %}
+{% block content %}
+<!-- Admin Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="section-title mb-0">
+        <i class="fas fa-users"></i> Administrar Equipos
+    </h1>
+    
+    <!-- Language Switcher -->
+    <div class="btn-group">
+        <a href="?lang=es" class="btn {% if lang == 'es' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+            <i class="fas fa-globe-americas me-2"></i>Español
+        </a>
+        <a href="?lang=en" class="btn {% if lang == 'en' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+            <i class="fas fa-globe-europe me-2"></i>English
+        </a>
+    </div>
+</div>
 
-    <!-- Título para editar o agregar un equipo -->
-    <h2 class="mb-3">
-        Buscar Equipo por ID o Nombre o Liga
+<!-- Navigation Breadcrumb -->
+<nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/adminDashboard">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Equipos</li>
+    </ol>
+</nav>
+
+<!-- Add Team Form -->
+<div class="team-form">
+    <div class="card-header">
+        <h4 class="mb-0"><i class="fas fa-plus-circle me-2"></i>Añadir Nuevo Equipo</h4>
+    </div>
+    <div class="mt-3">
+        <form action="/adminEquipos" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label for="club_name" class="form-label">Nombre del Club</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-futbol"></i></span>
+                    <input type="text" class="form-control" id="club_name" name="club_name" required>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="league" class="form-label">Liga</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-trophy"></i></span>
+                    <input type="text" class="form-control" id="league" name="league" required>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="foundation_year" class="form-label">Año de Fundación</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                    <input type="number" class="form-control" id="foundation_year" name="foundation_year">
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="president" class="form-label">Presidente</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                    <input type="text" class="form-control" id="president" name="president">
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="coach" class="form-label">Entrenador</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" class="form-control" id="coach" name="coach">
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="stadium_name" class="form-label">Estadio</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-home"></i></span>
+                    <input type="text" class="form-control" id="stadium_name" name="stadium_name">
+                </div>
+            </div>
+            
+            <div class="col-12 text-end mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save me-2"></i>Guardar Equipo
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Teams List -->
+<div class="admin-table">
+    <h2 class="d-flex align-items-center">
+        <i class="fas fa-list me-2"></i>Lista de Equipos
     </h2>
     
-    <!-- Formulario para buscar equipos por ID, nombre o liga -->
-    <form method="GET" class="card p-4 shadow" id="searchForm">
-        <div class="mb-3">
-            <label class="form-label">Buscar Equipo por ID, Nombre o Liga</label>
-            <input type="text" class="form-control" id="searchInput" placeholder="Ingrese el ID, nombre o liga del equipo" required>
-        </div>
-
-        <button type="submit" class="btn btn-success w-100">Buscar</button>
-    </form>
-
-    <!-- Título para la lista de equipos -->
-    <h2 class="mt-5">Lista de Equipos Buscados</h2>
+    <!-- Search Box -->
+    <div class="search-box">
+        <form id="searchForm" class="mb-0">
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar por ID o nombre...">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search me-1"></i>Buscar
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Teams Table -->
     <div class="table-responsive">
         <table class="table table-striped text-center align-middle" id="teamsTable">
             <thead class="table-dark">
@@ -97,73 +162,23 @@
             </thead>
             <tbody>
                 {% for team in teams %}
+                {% if search is empty or team.id == search or team.club_name matches '/.*' ~ search ~ '.*/i' %}
                 <tr>
                     <td>{{ team.id }}</td>
                     <td>{{ team.club_name }}</td>
                     <td>{{ team.league }}</td>
                     <td>
-                        <a href="/adminEquiposId/details/{{ team.id }}" class="btn btn-info btn-sm">Detalles</a>
-                        <a href="/adminEquiposId/edit/{{ team.id }}" class="btn btn-warning btn-sm">Editar</a>
-                        <a href="/adminEquiposId/delete/{{ team.id }}" class="btn btn-danger btn-sm">Eliminar</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Script de Bootstrap para la funcionalidad de la página -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const searchValue = document.getElementById('searchInput').value.toLowerCase();
-            const rows = document.querySelectorAll('#teamsTable tbody tr');
-            let found = false;
-
-            rows.forEach(row => {
-                const id = row.cells[0].textContent.toLowerCase();
-                const clubName = row.cells[1].textContent.toLowerCase();
-                const league = row.cells[2].textContent.toLowerCase();
-
-                if (id.includes(searchValue) || clubName.includes(searchValue) || league.includes(searchValue)) {
-                    row.style.display = '';
-                    found = true;
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-
-            if (!found) {
-                const noResultRow = document.createElement('tr');
-                noResultRow.innerHTML = '<td colspan="4">No se encontró ningún equipo con los criterios de búsqueda.</td>';
-                document.querySelector('#teamsTable tbody').appendChild(noResultRow);
-            }
-        });
-    </script>
-
-    <!-- Título para la lista de equipos -->
-    <h2 class="mt-5">Lista de Equipos</h2>
-    <div class="table-responsive">
-        <table class="table table-striped text-center align-middle">
-            <thead class="table-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre del Equipo</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Iterar sobre cada equipo y mostrar sus detalles -->
-                {% for team in teams %}
-                {% if search is empty or team.id == search or team.club_name matches '/.*' ~ search ~ '.*/i' %}
-                <tr>
-                    <td>{{ team.id }}</td>
-                    <td>{{ team.club_name }}</td>
-                    <td>
-                        <a href="/adminEquiposId/details/{{ team.id }}" class="btn btn-info btn-sm">Detalles</a>
-                        <a href="/adminEquiposId/edit/{{ team.id }}" class="btn btn-warning btn-sm">Editar</a>
-                        <a href="/adminEquiposId/delete/{{ team.id }}" class="btn btn-danger btn-sm">Eliminar</a>
+                        <div class="btn-group btn-group-sm">
+                            <a href="/adminEquiposId/details/{{ team.id }}" class="btn btn-info" title="Ver detalles">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="/adminEquiposId/edit/{{ team.id }}" class="btn btn-warning" title="Editar">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="/adminEquiposId/delete/{{ team.id }}" class="btn btn-danger" title="Eliminar">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
                     </td>
                 </tr>
                 {% endif %}
@@ -171,8 +186,48 @@
             </tbody>
         </table>
     </div>
+</div>
+{% endblock %}
 
-    <!-- Script de Bootstrap -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% block javascripts %}
+<script>
+    // Search functionality
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const searchValue = document.getElementById('searchInput').value.toLowerCase();
+        const rows = document.querySelectorAll('#teamsTable tbody tr');
+        let found = false;
+
+        rows.forEach(row => {
+            const id = row.cells[0].textContent.toLowerCase();
+            const clubName = row.cells[1].textContent.toLowerCase();
+            const league = row.cells[2].textContent.toLowerCase();
+
+            if (id.includes(searchValue) || clubName.includes(searchValue) || league.includes(searchValue)) {
+                row.style.display = '';
+                found = true;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        if (!found) {
+            const tbody = document.querySelector('#teamsTable tbody');
+            const noResultsRows = document.querySelectorAll('.no-results-row');
+            
+            // Remove existing no results message if any
+            noResultsRows.forEach(row => row.remove());
+            
+            // Add no results message
+            const noResultRow = document.createElement('tr');
+            noResultRow.className = 'no-results-row';
+            noResultRow.innerHTML = '<td colspan="4" class="text-center py-3">No se encontró ningún equipo con los criterios de búsqueda.</td>';
+            tbody.appendChild(noResultRow);
+        } else {
+            // Remove any no results message
+            const noResultsRows = document.querySelectorAll('.no-results-row');
+            noResultsRows.forEach(row => row.remove());
+        }
+    });
+</script>
+{% endblock %}

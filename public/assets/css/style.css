@@ -1,240 +1,388 @@
-body {
-    font-family: Arial, sans-serif;
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base styles */
+:root {
+  --primary-color: #1e88e5;
+  --secondary-color: #26a69a;
+  --accent-color: #ff9800;
+  --danger-color: #e53935;
+  --success-color: #43a047;
+  --text-color: #333333;
+  --text-light: #ffffff;
+  --bg-color: #f5f5f5;
+  --card-color: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
-.navbar {
-    background-color: #f8f9fa;
-    padding: 10px;
-}
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-/* Reset básico */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #ffffff;
-    background-color: #536270; /* Un tono oscuro y elegante */
-    border-radius: 30px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacio entre el icono y el texto */
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    margin-left: 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: var(--transition);
 }
 
 .navbar-brand i {
-    color: #000000; /* Color dorado para destacar el icono */
-    font-size: 1.8rem;
+  color: var(--accent-color);
+  font-size: 1.8rem;
 }
 
 .navbar-brand:hover {
-    background-color: #34495e; /* Un tono más oscuro al pasar el mouse */
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* Estilos generales del body */
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+.navbar a.nav-link {
+  color: var(--text-light);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: var(--transition);
 }
 
-/* Estilos mejorados de la barra de navegación */
-.navbar {
-    background-color: #2c3e50; /* Azul oscuro elegante */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar a.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
-/* Estilos de los enlaces de navegación */
-.navbar a {
-    color: #ecf0f1; /* Texto claro */
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+/* Cards */
+.card {
+  background-color: var(--card-color);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  overflow: hidden;
+  height: 100%;
 }
 
-.navbar a:hover {
-    background-color: #34495e; /* Cambio de color en hover */
-    color: #f1c40f; /* Amarillo dorado para resaltar */
-    transform: scale(1.05);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Estilos para las tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.card-body {
+  padding: 24px;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
+.card-title {
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--primary-color);
 }
 
-th {
-    background-color: #f5f5f5;
-    font-weight: bold;
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
 }
 
-tr:hover {
-    background-color: #f5f5f5;
+.btn-primary:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px);
 }
 
-/* Estilos para las listas */
-ul {
-    list-style: none;
-    padding: 20px;
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--text-light);
 }
 
-li {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.btn-success:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
 }
 
-/* Estilos para los enlaces */
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--text-light);
 }
 
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+.btn-danger:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
 }
 
-/* Estilos para los títulos */
-h1 {
-    color: #333;
-    margin: 30px 0 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #007bff;
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
 }
 
-/* Estilos del footer */
-footer {
-    border-top: 1px solid #ddd;
-    color: #666;
+.btn-secondary:hover {
+  background-color: #00897b;
+  transform: translateY(-2px);
 }
 
-footer a {
-    color: #555;
+/* Tables */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-    
-    li {
-        padding: 10px;
-    }
-    
-    h1 {
-        font-size: 24px;
-    }
+.table th {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 16px;
+  font-weight: 500;
 }
 
-/* Contenedor principal */
-.container-form {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    background-color: #34495e;
-}
-.containerMatches{
-    margin-top: 20px;
-}
-.info{
-    background-color: #dadbdd;
-    border-radius: 15px;
-}
-.league-title {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 5px;
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
+.table td {
+  padding: 16px;
+  vertical-align: middle;
+}
+
+/* Badge styles */
+.badge {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(30, 136, 229, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Match cards */
 .match-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }
 
 .team img {
-    max-width: 50px;
-    height: auto;
-    margin-bottom: 5px;
+  max-width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
 }
 
 .score {
-    font-size: 1.5em;
-    font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .match-time {
-    font-size: 0.9em;
-    color: #666;
+  font-size: 0.9rem;
+  color: #666;
 }
-.card-body {
-    transition: transform 0.3s ease;
-  }
 
-  .card-body:hover {
-    transform: scale(1.05); /* Aumenta el tamaño en un 10% */
-  }
-  li.nav-item {
-    margin-right: 10px;
-    width: 120px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    border: none;
-    background-color: #2c3e50;
-    border-radius: 5px;
-    padding: 10px;
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 24px 0;
+  margin-top: 48px;
+  text-align: center;
 }
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 16px;
+  }
+  
+  .match-card {
+    padding: 12px;
+  }
+  
+  .team img {
+    max-width: 40px;
+  }
+  
+  .score {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+  }
+  
+  .btn.btn-primary {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  
+  .btn.btn-secondary.show-league {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn.btn-primary {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .btn.btn-secondary.show-league {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 8px;
+    display: block;
+  }
+}
+
+/* League chart container */
+.chart-container {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+/* Custom classes for the app */
+.containerMatches {
+  margin-top: 32px;
+}
+
+.info {
+  background-color: rgba(30, 136, 229, 0.1);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title i {
+  color: var(--accent-color);
+}
+
+.numero{
+  color: white;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .card-body {
+      padding: 16px;
+    }
+    
+    .match-card {
+      padding: 12px;
+    }
+    
+    .team img {
+      max-width: 40px;
+    }
+    
+    .score {
+      font-size: 1.5rem;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+    }
+    
+    .btn.btn-primary {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .btn.btn-primary {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+  

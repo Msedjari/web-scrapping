@@ -1,44 +1,102 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
+
 .container {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
 }
+
 h1 {
-    font-size: 4rem;
-    color: #e74c3c;
+    font-size: 6rem;
+    font-weight: 700;
+    color: #e53935;
     margin: 0;
+    line-height: 1;
 }
+
 .tarjeta {
-    font-size: 8rem;
-    color: #e74c3c;
+    font-size: 5rem;
+    color: #e53935;
     margin: 1rem 0;
 }
-p {
-    font-size: 1.2rem;
-    color: #333;
+
+.tarjeta i {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    animation: pulse 2s infinite;
 }
+
+.message {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.submessage {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #2ecc71;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #43a047;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background 0.3s;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .btn:hover {
-    background: #27ae60;
+    background: #388e3c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 4rem;
+    }
+    
+    .tarjeta {
+        font-size: 3.5rem;
+    }
+    
+    .message {
+        font-size: 1.2rem;
+    }
+    
+    .submessage {
+        font-size: 1rem;
+    }
 }

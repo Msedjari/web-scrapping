@@ -2,25 +2,277 @@
 
 {% block title %}Noticias - Fastscore{% endblock %}
 
-{% block content %}
-<h1 class="mb-4"><i class="fa-solid fa-newspaper"></i>Últimas Noticias</h1>
+{% block stylesheets %}
+<style>
+    .news-filter {
+        background-color: var(--card-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .news-card {
+        border: none;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .news-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .news-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .news-card .card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+    
+    .news-card .card-title a {
+        color: var(--primary-color);
+        transition: color 0.3s;
+    }
+    
+    .news-card .card-title a:hover {
+        color: #1565c0;
+    }
+    
+    .news-card .card-text {
+        color: #666;
+        line-height: 1.6;
+    }
+    
+    .news-card .card-footer {
+        background-color: transparent;
+        padding: 1rem 1.5rem;
+    }
+    
+    .category-badge {
+        background-color: rgba(30, 136, 229, 0.1);
+        color: var(--primary-color);
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin-right: 8px;
+        font-weight: 500;
+    }
+    
+    .news-card .date-info {
+        display: flex;
+        align-items: center;
+        color: #888;
+        font-size: 0.85rem;
+    }
+    
+    .news-date {
+        color: #888;
+        font-size: 0.85rem;
+    }
+</style>
+{% endblock %}
 
-<div class="container">
-    <div class="row">
-        {% for new in news %}
-        <div class="col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="{{ new.link }}" class="text-decoration-none" target="_blank">{{ new.title }}</a>
-                    </h5>
-                    <strong><p class="card-text mb-0">{{ new.text }}</p></strong>
-                    <p class="card-text mb-0">{{ new.content }}</p>
-                    <p class="card-text mb-0"><small class="text-muted">{{ new.date }}</small></p>
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="section-title mb-0">
+        <i class="fa-solid fa-newspaper me-2"></i> Últimas Noticias
+    </h1>
+    
+    <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-filter me-2"></i>Filtrar
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item active" href="#" data-filter="all">Todas las noticias</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" data-filter="transfers">Fichajes</a></li>
+            <li><a class="dropdown-item" href="#" data-filter="matches">Partidos</a></li>
+            <li><a class="dropdown-item" href="#" data-filter="interviews">Entrevistas</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- News Filter Section -->
+<div class="news-filter mb-4">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">
+                    <i class="fas fa-search text-primary"></i>
+                </span>
+                <input type="text" class="form-control border-start-0" id="newsSearch" placeholder="Buscar noticias..." aria-label="Buscar noticias">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex justify-content-md-end">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-primary active" data-sort="newest">
+                        <i class="fas fa-sort-amount-down me-1"></i>Más recientes
+                    </button>
+                    <button type="button" class="btn btn-outline-primary" data-sort="oldest">
+                        <i class="fas fa-sort-amount-up me-1"></i>Más antiguas
+                    </button>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
 </div>
+
+<div class="row" id="newsContainer">
+    {% for new in news %}
+    <div class="col-lg-4 col-md-6 mb-4 news-item">
+        <div class="news-card">
+            <div class="card-body">
+                {% if new.categories is defined %}
+                <div class="mb-2">
+                    {% for category in new.categories|default(['General']) %}
+                    <span class="category-badge">{{ category }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                <h5 class="card-title">
+                    <a href="{{ new.link }}" class="text-decoration-none" target="_blank">{{ new.title }}</a>
+                </h5>
+                
+                <p class="card-text fw-bold mb-2">{{ new.text }}</p>
+                <p class="card-text">{{ new.content }}</p>
+            </div>
+            
+            <div class="card-footer d-flex justify-content-between align-items-center">
+                <div class="date-info">
+                    <i class="far fa-calendar-alt text-primary me-2"></i>
+                    <span class="news-date">{{ new.date }}</span>
+                </div>
+                
+                <a  class="btn btn-sm btn-primary" target="_blank">
+                    <i class="fas fa-external-link-alt me-1"></i> Leer más
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Empty State -->
+<div id="emptyState" class="text-center py-5 d-none">
+    <i class="fas fa-newspaper fa-4x text-muted mb-3"></i>
+    <h3 class="text-muted">No se encontraron noticias</h3>
+    <p class="text-muted">Intenta con otra búsqueda o elimina los filtros aplicados.</p>
+    <button id="resetFilters" class="btn btn-outline-primary mt-2">
+        <i class="fas fa-sync-alt me-2"></i>Restablecer filtros
+    </button>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const newsSearch = document.getElementById('newsSearch');
+        const newsContainer = document.getElementById('newsContainer');
+        const newsItems = document.querySelectorAll('.news-item');
+        const emptyState = document.getElementById('emptyState');
+        const resetFilters = document.getElementById('resetFilters');
+        
+        // Filter news items based on search term
+        function filterNews() {
+            const searchTerm = newsSearch.value.toLowerCase();
+            let visibleCount = 0;
+            
+            newsItems.forEach(item => {
+                const title = item.querySelector('.card-title').textContent.toLowerCase();
+                const content = item.querySelector('.card-text').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    item.style.display = '';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Show/hide empty state
+            if (visibleCount === 0) {
+                emptyState.classList.remove('d-none');
+            } else {
+                emptyState.classList.add('d-none');
+            }
+        }
+        
+        // Sort news by date
+        function sortNews(order) {
+            const items = Array.from(newsItems);
+            
+            items.sort((a, b) => {
+                const dateA = new Date(a.querySelector('.news-date').textContent);
+                const dateB = new Date(b.querySelector('.news-date').textContent);
+                
+                return order === 'newest' ? dateB - dateA : dateA - dateB;
+            });
+            
+            // Remove all items and re-append in sorted order
+            items.forEach(item => newsContainer.appendChild(item));
+        }
+        
+        // Event listeners
+        newsSearch.addEventListener('input', filterNews);
+        
+        document.querySelectorAll('[data-sort]').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('[data-sort]').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                sortNews(this.getAttribute('data-sort'));
+            });
+        });
+        
+        document.querySelectorAll('[data-filter]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelectorAll('[data-filter]').forEach(l => {
+                    l.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                // Update dropdown button text
+                document.getElementById('dropdownMenuButton').innerHTML = 
+                    `<i class="fas fa-filter me-2"></i>${this.textContent}`;
+                
+                // Filter logic would go here if we had categories
+                // For now just reset the search to show all
+                if (filter === 'all') {
+                    newsSearch.value = '';
+                    filterNews();
+                }
+            });
+        });
+        
+        // Reset filters
+        resetFilters.addEventListener('click', function() {
+            newsSearch.value = '';
+            document.querySelectorAll('[data-filter]').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector('[data-filter="all"]').classList.add('active');
+            
+            document.getElementById('dropdownMenuButton').innerHTML = 
+                '<i class="fas fa-filter me-2"></i>Filtrar';
+                
+            filterNews();
+        });
+    });
+</script>
 {% endblock %} 

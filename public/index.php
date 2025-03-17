@@ -29,7 +29,20 @@ try {
 
     $error = null; // Inicializar variable de error
 
-    // Enrutamiento
+    // API Routes - Process API requests first
+    if (strpos($request_uri, '/api') === 0) {
+        header('Content-Type: application/json');
+        
+        // Include the API routes
+        require_once __DIR__ . '/api-routes.php';
+        
+        // Handle the API request and output the response
+        $response = handleApiRequest($request_uri);
+        echo json_encode($response);
+        exit;
+    }
+
+    // Regular web routes (only processed if the request wasn't an API request)
     switch ($path) {
         case '/login':
             if (SessionController::isLoggedIn()) {
