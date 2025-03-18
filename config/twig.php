@@ -1,4 +1,13 @@
 <?php
+
+require_once '../src/controller/LanguageController.php';
+
+use App\Controller\LanguageController;
+use Twig\TwigFunction;
+// Initialize LangController
+$langController = new LanguageController();
+$translations = $langController->getTranslations();
+
 // Iniciamos la sesión
 session_start();
 
@@ -16,26 +25,15 @@ $twig = new \Twig\Environment($loader, [
 // Añadir extensión de depuración (solo en desarrollo)
 $twig->addExtension(new \Twig\Extension\DebugExtension());
 
-// Filtro para usar gettext {{ "Texto a traducir"|gettext }}
-class GettextExtension extends \Twig\Extension\AbstractExtension {
-    public function getFilters() {
-        return [
-            new \Twig\TwigFilter('gettext', 'gettext'),
-        ];
-    }
-}
+$locale = $langController->detectUserLocale();
 
-// Añadir el filtro de gettext a Twig
-$twig->addExtension(new GettextExtension());
+// Add translation function to Twig
+$twig->addFunction(new TwigFunction('trans', function ($key) use ($translations) {
+    return $translations[$key] ?? $key;
+}));
 
-// Pasar las variables de sesión al entorno de Twig
-$twig->addGlobal('session', $_SESSION);
 
-// Limpiar las variables de sesión después de cargarlas
-function clearSessionMessages() {
-    unset($_SESSION['error'], $_SESSION['success']);
-}
-clearSessionMessages();
 
-// Devolver la instancia de Twig
+
+// Devolver la instancia de Twig con el locale
 return $twig;

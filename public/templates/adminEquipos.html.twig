@@ -74,6 +74,7 @@
     </div>
     <div class="mt-3">
         <form action="/adminEquipos" method="post" class="row g-3">
+            <input type="hidden" name="id" value="{{ team.id }}">
             <div class="col-md-6">
                 <label for="club_name" class="form-label">Nombre del Club</label>
                 <div class="input-group">
@@ -89,22 +90,7 @@
                     <input type="text" class="form-control" id="league" name="league" required>
                 </div>
             </div>
-            
-            <div class="col-md-6">
-                <label for="foundation_year" class="form-label">Año de Fundación</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                    <input type="number" class="form-control" id="foundation_year" name="foundation_year">
-                </div>
-            </div>
-            
-            <div class="col-md-6">
-                <label for="president" class="form-label">Presidente</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
-                    <input type="text" class="form-control" id="president" name="president">
-                </div>
-            </div>
+
             
             <div class="col-md-6">
                 <label for="coach" class="form-label">Entrenador</label>

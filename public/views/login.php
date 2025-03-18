@@ -2,6 +2,7 @@
 //print_r($_SESSION); // Imprimir la sesión para depuración
 //Cargamos el archivo twig
 
+require_once __DIR__ . '../../../config/twig.php'; // Cargar la configuración de Twig
 // Verificación de que el usuario esté conectado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = htmlspecialchars($_POST["username"]); // Sanitizar el nombre de usuario

@@ -4,10 +4,16 @@ ini_set('display_errors', 1); // Mostrar errores
 ini_set('display_startup_errors', 1); // Mostrar errores de inicio
 error_reporting(E_ALL); // Reportar todos los errores
 
+require_once __DIR__ . '/../src/controller/LanguageController.php';
 use App\Models\User;
+use App\Controller\LanguageController;
 
 require_once __DIR__ . '/../vendor/autoload.php'; // Cargar autoload de Composer
 require_once __DIR__ . '/../src/render.php'; // Cargar archivo de renderizado
+$langController = new LanguageController();
+
+$lang = isset($_GET['lang']) ? $_GET['lang'] : 'es';
+$langController->setLanguage($lang);
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates'); // Configurar Twig para cargar plantillas
 $twig = new \Twig\Environment($loader); // Crear instancia de Twig
@@ -115,10 +121,10 @@ try {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $id = $_POST['id'];
                 $club_name = $_POST['club_name'];
-                $league_name = $_POST['league_name'];
-                $stadium = $_POST['stadium'];
+                $league = $_POST['league'];
+                $stadium_name = $_POST['stadium_name'];
                 $coach = $_POST['coach'];
-                addTeam($id, $club_name, $league_name, $stadium, $coach); // Agregar equipo
+                addTeam($id, $club_name, $league, $stadium_name, $coach); // Agregar equipo
                 header("Location: /adminEquipos"); // Redirigir a la página de administración de equipos
                 exit();
             } else {
@@ -138,24 +144,37 @@ try {
                         'team' => getTeamById($id), // Obtener equipo por ID
                     ]);
                     break;
-                case 'edit':
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $club_name = $_POST['club_name'];
-                        $league_name = $_POST['league_name'];
-                        $stadium = $_POST['stadium'];
-                        $coach = $_POST['coach'];
-                        updateTeam($id, $club_name, $league_name, $stadium, $coach); // Actualizar equipo
-                        header("Location: /adminEquiposId/details/$id"); // Redirigir a la página de detalles del equipo
-                        exit();
-                    } else {
-                        echo $twig->render('adminEquiposIdEdit.html.twig', [
-                            'team' => getTeamById($id) // Obtener equipo por ID
-                        ]);
-                    }
-                    break;
+                    case 'edit':
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            // Get all form fields safely
+                            $id_club = $_POST['id'];
+                            $club_name = $_POST['club_name'];
+                            $league_name = $_POST['league_name'];
+                            $stadium_name = $_POST['stadium_name'];
+                            $coach = $_POST['coach'];
+                            $foundation_year = isset($_POST['foundation_year']) ? $_POST['foundation_year'] : null;
+                            $president = isset($_POST['president']) ? $_POST['president'] : null;
+                            $website = isset($_POST['website']) ? $_POST['website'] : null;
+                            $stadium_capacity = isset($_POST['stadium_capacity']) ? $_POST['stadium_capacity'] : null;
+                            $stadium_address = isset($_POST['stadium_address']) ? $_POST['stadium_address'] : null;
+                            $escudo_image = isset($_POST['escudo_image']) ? $_POST['escudo_image'] : null;
+                            $url = isset($_POST['url']) ? $_POST['url'] : null;
+                    
+                            // Update team with all fields
+                            updateTeam($id_club, $club_name, $league_name, $stadium_name, $coach, $foundation_year, $president, $website, $stadium_capacity, $stadium_address, $escudo_image, $url);
+                    
+                            // Redirect to team details page
+                            header("Location: /adminEquiposId/details/$id_club");
+                            exit();
+                        } else {
+                            echo $twig->render('adminEquiposIdEdit.html.twig', [
+                                'team' => getTeamById($id) // Get team details by ID
+                            ]);
+                        }
+                        break;                    
                 case 'delete':
                     deleteTeamById($id); // Eliminar equipo por ID
-                    header("Location: /adminEquipos/delete/$id"); // Redirigir a la página de administración de equipos
+                    header("Location: /adminEquipos"); // Redirigir a la página de administración de equipos
                     break;
                 default:
                     header("HTTP/1.0 404 Not Found"); // Página no encontrada
@@ -212,14 +231,14 @@ function getAllTeams() {
     return $stmt->fetchAll(PDO::FETCH_ASSOC); // Devolver resultados
 }
 
-function addTeam($id, $club_name, $league_name, $stadium, $coach) {
+function addTeam($id, $club_name, $league, $stadium_name, $coach) {
     global $conn;
     try {
-        $stmt = $conn->prepare("INSERT INTO team_info (id, club_name, league_name, stadium, coach) VALUES (:id, :club_name, :league_name, :stadium, :coach)"); // Consulta para agregar equipo
+        $stmt = $conn->prepare("INSERT INTO team_info (id, club_name, league, stadium_name, coach) VALUES (:id, :club_name, :league, :stadium_name, :coach)"); // Consulta para agregar equipo
         $stmt->bindParam(':id', $id, PDO::PARAM_INT); // Vincular parámetro ID
         $stmt->bindParam(':club_name', $club_name, PDO::PARAM_STR); // Vincular parámetro nombre del club
-        $stmt->bindParam(':league_name', $league_name, PDO::PARAM_STR); // Vincular parámetro nombre de la liga
-        $stmt->bindParam(':stadium', $stadium, PDO::PARAM_STR); // Vincular parámetro estadio
+        $stmt->bindParam(':league', $league, PDO::PARAM_STR); // Vincular parámetro nombre de la liga
+        $stmt->bindParam(':stadium_name', $stadium_name, PDO::PARAM_STR); // Vincular parámetro estadio
         $stmt->bindParam(':coach', $coach, PDO::PARAM_STR); // Vincular parámetro entrenador
         $stmt->execute(); // Ejecutar consulta
         return true; // Devolver verdadero si se agregó correctamente
@@ -229,22 +248,48 @@ function addTeam($id, $club_name, $league_name, $stadium, $coach) {
     }
 }
 
-function updateTeam($id, $club_name, $league_name, $stadium, $coach) {
+function updateTeam($id, $club_name, $league_name, $stadium_name, $coach, $foundation_year = null, $president = null, $website = null, $stadium_capacity = null, $stadium_address = null, $escudo_image = null, $url = null) {
     global $conn;
     try {
-        $stmt = $conn->prepare("UPDATE team_info SET club_name = :club_name, league_name = :league_name, stadium = :stadium, coach = :coach WHERE id = :id AND logo_url IS NOT NULL"); // Consulta para actualizar equipo
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT); // Vincular parámetro ID
-        $stmt->bindParam(':club_name', $club_name, PDO::PARAM_STR); // Vincular parámetro nombre del club
-        $stmt->bindParam(':league_name', $league_name, PDO::PARAM_STR); // Vincular parámetro nombre de la liga
-        $stmt->bindParam(':stadium', $stadium, PDO::PARAM_STR); // Vincular parámetro estadio
-        $stmt->bindParam(':coach', $coach, PDO::PARAM_STR); // Vincular parámetro entrenador
-        $stmt->execute(); // Ejecutar consulta
-        return true; // Devolver verdadero si se actualizó correctamente
+        $stmt = $conn->prepare("
+            UPDATE team_info 
+            SET club_name = :club_name, 
+                league = :league_name, 
+                stadium_name = :stadium_name, 
+                coach = :coach, 
+                foundation_year = :foundation_year, 
+                president = :president,
+                website = :website,
+                stadium_capacity = :stadium_capacity,
+                stadium_address = :stadium_address,
+                escudo_image = :escudo_image,
+                url = :url
+            WHERE id = :id
+        ");
+
+        // Bind parameters
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':club_name', $club_name, PDO::PARAM_STR);
+        $stmt->bindParam(':league_name', $league_name, PDO::PARAM_STR);
+        $stmt->bindParam(':stadium_name', $stadium_name, PDO::PARAM_STR);
+        $stmt->bindParam(':coach', $coach, PDO::PARAM_STR);
+        $stmt->bindParam(':foundation_year', $foundation_year, PDO::PARAM_INT);
+        $stmt->bindParam(':president', $president, PDO::PARAM_STR);
+        $stmt->bindParam(':website', $website, PDO::PARAM_STR);
+        $stmt->bindParam(':stadium_capacity', $stadium_capacity, PDO::PARAM_INT);
+        $stmt->bindParam(':stadium_address', $stadium_address, PDO::PARAM_STR);
+        $stmt->bindParam(':escudo_image', $escudo_image, PDO::PARAM_STR);
+        $stmt->bindParam(':url', $url, PDO::PARAM_STR);
+
+        // Execute query
+        $stmt->execute();
+        return true;
     } catch (PDOException $e) {
-        error_log("Error updating team: " . $e->getMessage()); // Registrar error
-        return false; // Devolver falso si hubo un error
+        error_log("Error updating team: " . $e->getMessage());
+        return false;
     }
 }
+
 
 function deleteTeamById($id) {
     global $conn;
